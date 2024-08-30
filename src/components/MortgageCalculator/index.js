@@ -27,10 +27,14 @@ const MortgageCalculator = ({ ...props }) => {
 		let radioButtonChosen = data.type
 		console.log("radioButtonChosen: " +radioButtonChosen)
 
+// console.log(setNewMortgageAmount)
 
 		if(radioButtonChosen === "repayment"){
-			let removeOnSubmit = document.getElementById('removeFirst')
-			removeOnSubmit.remove()
+			let hideOnSubmit = document.getElementById('initialView')
+			hideOnSubmit.setAttribute("hidden", true)
+
+			let showResults = document.getElementById('showResults');
+			showResults.removeAttribute("hidden");
 
 			console.log("Repayment was selected")
 			let convertInterestToPercent = interestRate/100;
@@ -51,26 +55,30 @@ const MortgageCalculator = ({ ...props }) => {
 			console.log("Total Repayment: " +totalRepayment)
 
 
-			let grabCalcRez = document.getElementById('calcRez')
-			console.log(grabCalcRez)
-			let createDiv = document.createElement('div')
-			createDiv.classList.add('card', `card-1`)
-			grabCalcRez.appendChild(createDiv)
+			// let grabCalcRez = document.getElementById('calcRez')
+			// console.log(grabCalcRez)
+			// let createDiv = document.createElement('div')
+			// createDiv.classList.add('card', `card-1`)
+			// grabCalcRez.appendChild(createDiv)
 
-			let newCard = document.querySelector(`.card-1`)
-			console.log(newCard)
+			// let newCard = document.querySelector(`.card-1`)
+			// console.log(newCard)
 
-			let showMonthlyPayment = document.createElement('h3')
-			showMonthlyPayment.setAttribute('id', `showMonthlyPayment-1`)
-			showMonthlyPayment.innerText = monthlyPayment
+			// let showMonthlyPayment = document.createElement('h3')
+			// showMonthlyPayment.setAttribute('id', `showMonthlyPayment-1`)
+			// showMonthlyPayment.innerText = monthlyPayment
 
-			let showTotalRepayment = document.createElement('h4')
-			showTotalRepayment.setAttribute('id', `showTotalRepayment-1`)
-			showTotalRepayment.innerText = totalRepayment
+			// let showTotalRepayment = document.createElement('h4')
+			// showTotalRepayment.setAttribute('id', `showTotalRepayment-1`)
+			// showTotalRepayment.innerText = totalRepayment
 
-			newCard.appendChild(showMonthlyPayment)
-			newCard.appendChild(showTotalRepayment)
+			// newCard.appendChild(showMonthlyPayment)
+			// newCard.appendChild(showTotalRepayment)
 
+			let getMortgageAmount = document.getElementById("mortgageAmount")
+			let getTotalRepayment = document.getElementById("totalRepayment")
+			getMortgageAmount.innerHTML = monthlyPayment
+			getTotalRepayment.innerHTML  = totalRepayment
 
 
 		}
@@ -80,18 +88,23 @@ const MortgageCalculator = ({ ...props }) => {
 
 	};
 	return (
+		<div>
+			<div>
 		<form
 			className="mortgage-calculator d-flex flex-column flex-md-row bg-white rounded-4 w-100"
 			ref={formRef}
 			onSubmit={handleSubmit}
 		>
 
-			<MortgageForm></MortgageForm>
-			<CalculatedResults>
-				<h3></h3>
-			</CalculatedResults>
+			<MortgageForm/>
+
 			{/* TAKE IT AWAY! */}
 		</form>
+		</div>
+		<div>
+		<CalculatedResults/>
+		</div>
+		</div>
 	);
 };
 

@@ -11,6 +11,7 @@ import "./style.scss"
     // let [radioButtonRepayment, setRadioRepayment] = useState([])
     // let [radioButtonInterestOnly, setRadioInterestOnly] = useState([])
 
+
   return(
   // this (BELOW <>) is called a fragment "<>"
   <>
@@ -53,39 +54,38 @@ import "./style.scss"
           </div>
 
           <fieldset>
-        <legend>Mortgage Type</legend>
-        <div className="form-control radio-control">
-          <input
-            type="radio"
-            name="type"
-            id="repayment"
-            value="repayment"
+            <legend>Mortgage Type</legend>
+            <div className="form-control radio-control">
+              <input
+              type="radio"
+              name="type"
+              id="repayment"
+              value="repayment"
             // checked={radioButtonRepayment === "repayment"}
             // onChange={e => setRadioRepayment(e.target.value)}
-          />
-          <label htmlFor="repayment">Repayment</label>
-        </div>
-        <div className="form-control radio-control">
-          <input
-            type="radio"
-            name="type"
-            id="interest-only"
-            value="interest-only"
+              />
+              <label htmlFor="repayment">Repayment</label>
+            </div>
+            <div className="form-control radio-control">
+              <input
+              type="radio"
+              name="type"
+              id="interest-only"
+              value="interest-only"
             // checked={values.type === "interest-only"}
             // onChange={handleChanges}
-          />
-          <label htmlFor="interest-only">Interest Only</label>
+              />
+              <label htmlFor="interest-only">Interest Only</label>
+            </div>
+          </fieldset>
+            <button className="btn btn-warning">Calculate Payment</button>
         </div>
-
-      </fieldset>
-
-
-      </div>
     </div>
-    <button className="btn btn-warning">Calculate Payment</button>
+
 
   </>
   //COMPONENTS in REACT can only return ONE ELEMENT
+
   )
 }
 

@@ -2,6 +2,7 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import "./style.scss";
 import MortgageForm from "./MortgageForm"
+import CalculatedResults from './CalculatedResults'
 
 const MortgageCalculator = ({ ...props }) => {
 	const formRef = useRef(null);
@@ -26,15 +27,11 @@ const MortgageCalculator = ({ ...props }) => {
 		let radioButtonChosen = data.type
 		console.log("radioButtonChosen: " +radioButtonChosen)
 
-		// For example, if your interest rate is 6 percent, you would divide 0.06 by 12 to get a monthly rate of 0.005. You would then multiply this number by the amount of your loan to calculate your loan payment. If your loan amount is $100,000, you would multiply $100,000 by 0.005 for a monthly payment of $500.
-
-// 		To calculate your monthly mortgage payment, you can use the formula M = P.r (1 + r)n / (1 + r)n - 1, where:
-// M: is the total monthly mortgage payment
-// P: is the principal loan amount
-// r: is the monthly interest rate, which is the annual interest rate divided by 12
-// n: is the number of months required to repay the loan, which is the number of years multiplied by 12
 
 		if(radioButtonChosen === "repayment"){
+			let removeOnSubmit = document.getElementById('removeFirst')
+			removeOnSubmit.remove()
+
 			console.log("Repayment was selected")
 			let convertInterestToPercent = interestRate/100;
 			let monthlyRate = convertInterestToPercent/12;
@@ -49,10 +46,30 @@ const MortgageCalculator = ({ ...props }) => {
 			// Total Repayment = monthlyPayment * n
 			//n = Total number of payments (mortgage term in years * 12)
 			let termTimesTwelve = mortgageTerm * 12
-			let totalRepayment = monthlyPayment * termTimesTwelve
+			let x = monthlyPayment * termTimesTwelve
+			let totalRepayment = (Math.round((x) * 100) / 100).toFixed(2);
 			console.log("Total Repayment: " +totalRepayment)
 
 
+			let grabCalcRez = document.getElementById('calcRez')
+			console.log(grabCalcRez)
+			let createDiv = document.createElement('div')
+			createDiv.classList.add('card', `card-1`)
+			grabCalcRez.appendChild(createDiv)
+
+			let newCard = document.querySelector(`.card-1`)
+			console.log(newCard)
+
+			let showMonthlyPayment = document.createElement('h3')
+			showMonthlyPayment.setAttribute('id', `showMonthlyPayment-1`)
+			showMonthlyPayment.innerText = monthlyPayment
+
+			let showTotalRepayment = document.createElement('h4')
+			showTotalRepayment.setAttribute('id', `showTotalRepayment-1`)
+			showTotalRepayment.innerText = totalRepayment
+
+			newCard.appendChild(showMonthlyPayment)
+			newCard.appendChild(showTotalRepayment)
 
 
 
@@ -70,6 +87,9 @@ const MortgageCalculator = ({ ...props }) => {
 		>
 
 			<MortgageForm></MortgageForm>
+			<CalculatedResults>
+				<h3></h3>
+			</CalculatedResults>
 			{/* TAKE IT AWAY! */}
 		</form>
 	);

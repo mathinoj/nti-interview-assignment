@@ -1,19 +1,13 @@
 import { useState } from "react"
 import "./style.scss"
 
-// export default function MortgageForm(){
-  //LIKE this^^^ you get an error that says a module CANNOT have multiple default exports
   export default function MortgageForm(){
     let [newMortgageAmount, setNewMortgageAmount] = useState("")
-    let [mortgageAmountEntered, setMortgageAmountEntered] = useState([])
+    // let [mortgageAmountEntered, setMortgageAmountEntered] = useState([])
     let [mortgageTermEntered, setMortgageTermEntered] = useState([])
     let [interestRateEntered, setInterestRateEntered] = useState([])
-    // let [radioButtonRepayment, setRadioRepayment] = useState([])
-    // let [radioButtonInterestOnly, setRadioInterestOnly] = useState([])
-
 
   return(
-  // this (BELOW <>) is called a fragment "<>"
   <>
     <div className="mortgageApp">
       <button id="reset" type="reset">Clear All</button>
@@ -81,13 +75,6 @@ import "./style.scss"
             <button className="btn btn-warning">Calculate Payment</button>
         </div>
     </div>
-
-
   </>
-  //COMPONENTS in REACT can only return ONE ELEMENT
-
   )
 }
-
-// export default MortgageForm
-  //CUZ were EXPORTING AT FUNCTION we DONT need this

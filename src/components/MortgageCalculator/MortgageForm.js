@@ -7,14 +7,22 @@ import "./style.scss"
     let [mortgageTermEntered, setMortgageTermEntered] = useState([])
     let [interestRateEntered, setInterestRateEntered] = useState([])
 
+    function p(){
+      setNewMortgageAmount("")
+      setMortgageTermEntered("")
+      setInterestRateEntered("")
+    }
+
+
   return(
   <>
     <div className="mortgageApp">
-      <button id="reset" type="reset">Clear All</button>
-      <div className="mortgageCalculator">
+      <h1>Mortgage Calculator</h1>
+      <button id="reset" type="reset" onClick={() =>  p()}>Clear All</button>
+      <div id="mortForm" className="mortgageCalculator">
         <div className="amount">
-        <label htmlFor="item">Mortgage Amount</label>
-        <input
+          <label htmlFor="item">Mortgage Amount</label>
+          <input
           type="number"
           name="newMortgageAmount"
           value={newMortgageAmount}
@@ -22,7 +30,7 @@ import "./style.scss"
           id="item"
           required
           />
-          </div>
+        </div>
           <div className="mortgageTerm">
             <label htmlFor="item">Mortgage Term</label>
             <input

@@ -21,6 +21,14 @@ const MortgageCalculator = ({ ...props }) => {
 		let mortgageTerm = parseFloat(data.mortgageTermEntered);
 		let interestRate = parseFloat(data.interestRateEntered);
 		let radioButtonChosen = data.type
+		console.log(radioButtonChosen)
+		// let v = document.getElementById("resetIt");
+		// console.log(v)
+		// v.addEventListener('click', function(){
+		// 	let p = document.getElementById("item1")
+		// 	alert('reset clicked')
+		// })
+
 
 		if(radioButtonChosen === "repayment" || radioButtonChosen === "interest-only"){
 			let hideOnSubmit = document.getElementById('initialView')
@@ -54,7 +62,7 @@ const MortgageCalculator = ({ ...props }) => {
 	return (
 		<div id="container">
 			<div id="form">
-				<form
+				<form id="mForm"
 				className="mortgage-calculator d-flex flex-column flex-md-row bg-white rounded-4 w-100"
 				ref={formRef}
 				onSubmit={handleSubmit}

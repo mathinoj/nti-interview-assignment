@@ -26,9 +26,7 @@ const MortgageCalculator = ({ ...props }) => {
 		let errorTerm = document.getElementById("errorTerm")
 		let errorInterest = document.getElementById("errorInterest")
 		let errorRadio = document.getElementById("errorRadio")
-		// if(radioButtonChosen === undefined || mortgageAmount === NaN || mortgageTerm === NaN || interestRate === NaN){
-		// 	errorMortgage.removeAttribute("hidden")
-		// }
+
 
 
 		if(data.newMortgageAmount === ""){
@@ -54,11 +52,6 @@ const MortgageCalculator = ({ ...props }) => {
 
 
 		if(radioButtonChosen !== undefined && data.newMortgageAmount !== "" && data.mortgageTermEntered !== "" && data.interestRateEntered !== ""){
-			// errorMortgage.setAttribute("hidden", true)
-			// errorTerm.setAttribute("hidden", true)
-			// errorInterest.setAttribute("hidden", true)
-			errorRadio.setAttribute("hidden", true)
-
 
 			let hideOnSubmit = document.getElementById('initialView')
 			hideOnSubmit.setAttribute("hidden", true)

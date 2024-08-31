@@ -7,10 +7,33 @@ import "./style.scss"
     let [mortgageTermEntered, setMortgageTermEntered] = useState([])
     let [interestRateEntered, setInterestRateEntered] = useState([])
 
+
+    // let x = document.getElementById("errorMortgage")
+
+
     function clearInputValues(){
       setNewMortgageAmount("")
       setMortgageTermEntered("")
       setInterestRateEntered("")
+
+      // console.log(x);
+      let getMortgageMsg = document.getElementById("errorMortgage")
+      console.log(getMortgageMsg);
+      let getTermMsg = document.getElementById("errorTerm")
+      let getInterestMsg = document.getElementById("errorInterest")
+      let getRadioMsg = document.getElementById("errorRadio")
+      if(getMortgageMsg.hidden === false){
+        getMortgageMsg.setAttribute("hidden", true)
+      }
+      if(getTermMsg.hidden === false){
+        getTermMsg.setAttribute("hidden", true)
+      }
+      if(getInterestMsg.hidden === false){
+        getInterestMsg.setAttribute("hidden", true)
+      }
+      if(getRadioMsg.hidden === false){
+        getRadioMsg.setAttribute("hidden", true)
+      }
     }
 
 

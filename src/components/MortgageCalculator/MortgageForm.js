@@ -83,17 +83,21 @@ import CalculatedResults from "./CalculatedResults"
             <p id="errorTerm" className="text-danger errorTerm" hidden>This field is required</p>
           </div>
 
-          <div className="interestRate">
-            <label htmlFor="item">Interest Rate</label>
+          <div className="interestRate mb-3">
+            <label htmlFor="basic-url item" className="form-label">Interest Rate</label>
+            <div className="input-group">
             <input
             type="number"
+            className="form-control"
             name="interestRateEntered"
             value={interestRateEntered}
             onChange={e => setInterestRateEntered(e.target.value)}
             id="item"
             // required
             />
-            <p id="errorInterest" className="errorInterest" hidden>This field is required</p>
+            <span className="input-group-text">%</span>
+            </div>
+            <p id="errorInterest" className="text-danger errorInterest" hidden>This field is required</p>
           </div>
 
           <fieldset>

@@ -1,6 +1,5 @@
 import { useState } from "react"
 import "./style.scss"
-import CalculatedResults from "./CalculatedResults"
 
   export default function MortgageForm(){
     let [newMortgageAmount, setNewMortgageAmount] = useState("")
@@ -124,9 +123,11 @@ import CalculatedResults from "./CalculatedResults"
               />
               <label htmlFor="interest-only">Interest Only</label>
             </div>
-            <p id="errorRadio" className="errorRadio" hidden>This field is required</p>
+            <p id="errorRadio" className="text-danger errorRadio" hidden>This field is required</p>
           </fieldset>
-            <button className="btn btn-warning">Calculate Payment</button>
+            <button className="btn btn-warning">
+              <img src="../images/icon-calculator.svg" alt="calculator icon" /><span>Calculate Payment</span>
+            </button>
         </div>
     </div>
   </>

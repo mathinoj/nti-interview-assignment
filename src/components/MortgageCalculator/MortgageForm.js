@@ -104,7 +104,7 @@ import "./style.scss"
         </div>
           <fieldset>
             <label>Mortgage Type</label>
-            <div className="form-control radio-control">
+            <div className="form-control radio-control d-flex align-items-center gap-2 p-2 my-2">
               <input
               type="radio"
               name="type"
@@ -115,7 +115,7 @@ import "./style.scss"
               />
               <label htmlFor="repayment">Repayment</label>
             </div>
-            <div className="form-control radio-control">
+            <div className="form-control radio-control d-flex align-items-center gap-2 p-2 my-2">
               <input
               type="radio"
               name="type"

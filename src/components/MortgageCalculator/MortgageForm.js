@@ -7,7 +7,7 @@ import "./style.scss"
     let [mortgageTermEntered, setMortgageTermEntered] = useState([])
     let [interestRateEntered, setInterestRateEntered] = useState([])
 
-    function p(){
+    function clearInputValues(){
       setNewMortgageAmount("")
       setMortgageTermEntered("")
       setInterestRateEntered("")
@@ -18,7 +18,7 @@ import "./style.scss"
   <>
     <div className="mortgageApp">
       <h1>Mortgage Calculator</h1>
-      <button id="reset" type="reset" onClick={() =>  p()}>Clear All</button>
+      <button id="reset" type="reset" onClick={() => clearInputValues()}>Clear All</button>
       <div id="mortForm" className="mortgageCalculator">
         <div className="amount">
           <label htmlFor="item">Mortgage Amount</label>
@@ -28,8 +28,9 @@ import "./style.scss"
           value={newMortgageAmount}
           onChange={e => setNewMortgageAmount(e.target.value)}
           id="item"
-          required
+          // required
           />
+          <p id="errorMortgage" className="errorMortgage" hidden>This field is required</p>
         </div>
           <div className="mortgageTerm">
             <label htmlFor="item">Mortgage Term</label>
@@ -39,8 +40,9 @@ import "./style.scss"
             value={mortgageTermEntered}
             onChange={e => setMortgageTermEntered(e.target.value)}
             id="item"
-            required
+            // required
             />
+            <p id="errorTerm" className="errorTerm" hidden>This field is required</p>
           </div>
 
           <div className="interestRate">
@@ -51,8 +53,9 @@ import "./style.scss"
             value={interestRateEntered}
             onChange={e => setInterestRateEntered(e.target.value)}
             id="item"
-            required
+            // required
             />
+            <p id="errorInterest" className="errorInterest" hidden>This field is required</p>
           </div>
 
           <fieldset>
@@ -79,6 +82,7 @@ import "./style.scss"
               />
               <label htmlFor="interest-only">Interest Only</label>
             </div>
+            <p id="errorRadio" className="errorRadio" hidden>This field is required</p>
           </fieldset>
             <button className="btn btn-warning">Calculate Payment</button>
         </div>

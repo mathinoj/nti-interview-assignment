@@ -21,16 +21,45 @@ const MortgageCalculator = ({ ...props }) => {
 		let mortgageTerm = parseFloat(data.mortgageTermEntered);
 		let interestRate = parseFloat(data.interestRateEntered);
 		let radioButtonChosen = data.type
-		console.log(radioButtonChosen)
-		// let v = document.getElementById("resetIt");
-		// console.log(v)
-		// v.addEventListener('click', function(){
-		// 	let p = document.getElementById("item1")
-		// 	alert('reset clicked')
-		// })
+
+		let errorMortgage = document.getElementById("errorMortgage")
+		let errorTerm = document.getElementById("errorTerm")
+		let errorInterest = document.getElementById("errorInterest")
+		let errorRadio = document.getElementById("errorRadio")
+		// if(radioButtonChosen === undefined || mortgageAmount === NaN || mortgageTerm === NaN || interestRate === NaN){
+		// 	errorMortgage.removeAttribute("hidden")
+		// }
 
 
-		if(radioButtonChosen === "repayment" || radioButtonChosen === "interest-only"){
+		if(data.newMortgageAmount === ""){
+			errorMortgage.removeAttribute("hidden")
+		}else{
+			errorMortgage.setAttribute("hidden", true)
+		}
+		if(data.mortgageTermEntered === ""){
+			errorTerm.removeAttribute("hidden")
+		}else{
+			errorTerm.setAttribute("hidden", true)
+		}
+		if(data.interestRateEntered === ""){
+			errorInterest.removeAttribute("hidden")
+		}else{
+			errorInterest.setAttribute("hidden", true)
+		}
+		if(data.type === undefined){
+			errorRadio.removeAttribute("hidden")
+		}else{
+			errorRadio.setAttribute("hidden", true)
+		}
+
+
+		if(radioButtonChosen !== undefined && data.newMortgageAmount !== "" && data.mortgageTermEntered !== "" && data.interestRateEntered !== ""){
+			// errorMortgage.setAttribute("hidden", true)
+			// errorTerm.setAttribute("hidden", true)
+			// errorInterest.setAttribute("hidden", true)
+			errorRadio.setAttribute("hidden", true)
+
+
 			let hideOnSubmit = document.getElementById('initialView')
 			hideOnSubmit.setAttribute("hidden", true)
 

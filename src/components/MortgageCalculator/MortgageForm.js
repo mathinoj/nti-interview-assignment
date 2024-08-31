@@ -51,35 +51,36 @@ import "./style.scss"
       <button id="reset" className="btn btn-link p-1 px-6 d-inline-block text-center" type="reset" onClick={() => clearInputValues()}>Clear All</button>
       </div>
       <div id="mortForm" className="mortgageCalculator">
-        <div className="amount mb-3">
+        <div className="amount p-1 px-0 py-3">
           <label htmlFor="basic-url item" className="form-label">Mortgage Amount</label>
-          <div className="input-group">
-          <span className="input-group-text">&#163;</span>
-          <input
-          type="number"
-          className="form-control"
-          name="newMortgageAmount"
-          value={newMortgageAmount}
-          onChange={e => setNewMortgageAmount(e.target.value)}
-          id="item"
-          // required
-          />
+          <div className="input-group d-flex justify-content-between text-lg">
+            <span className="input-group-text font-weight-bold p-2 border-end-0 border-2">&#163;</span>
+            <input
+            type="number"
+            className="form-control p-2 text-lg font-weight-bold border-start-0 border-2"
+            name="newMortgageAmount"
+            value={newMortgageAmount}
+            onChange={e => setNewMortgageAmount(e.target.value)}
+            id="item"
+            // required
+            />
           </div>
           <p id="errorMortgage" className="text-danger errorMortgage" hidden>This field is required</p>
         </div>
+        <div className="term-rate">
           <div className="mortgageTerm mb-3">
             <label htmlFor="basic-url item" className="form-label">Mortgage Term</label>
             <div className="input-group">
             <input
             type="number"
-            className="form-control"
+            className="form-control border-end-0"
             name="mortgageTermEntered"
             value={mortgageTermEntered}
             onChange={e => setMortgageTermEntered(e.target.value)}
             id="item"
             // required
             />
-            <span className="input-group-text">Years</span>
+            <span className="input-group-text border-start-0">Years</span>
             </div>
             <p id="errorTerm" className="text-danger errorTerm" hidden>This field is required</p>
           </div>
@@ -89,20 +90,20 @@ import "./style.scss"
             <div className="input-group">
             <input
             type="number"
-            className="form-control"
+            className="form-control border-end-0"
             name="interestRateEntered"
             value={interestRateEntered}
             onChange={e => setInterestRateEntered(e.target.value)}
             id="item"
             // required
             />
-            <span className="input-group-text">%</span>
+            <span className="input-group-text border-start-0">%</span>
             </div>
             <p id="errorInterest" className="text-danger errorInterest" hidden>This field is required</p>
           </div>
-
+        </div>
           <fieldset>
-            <legend>Mortgage Type</legend>
+            <label>Mortgage Type</label>
             <div className="form-control radio-control">
               <input
               type="radio"

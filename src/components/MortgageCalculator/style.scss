@@ -8,60 +8,52 @@
     src: url('/fonts/PlusJakartaSans-bold.ttf');
 }
 
-* {
-    // box-sizing: border-box;
-    // margin: 0;
-    // border: 2px solid black;
-}
+// *{
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+//   }
 
 .mortgage-calculator {
     max-width: 1008px;
     min-height: 606px;
     // Be sure to nest any custom classes on child elements to avoid conflicts
-    // border: 2px solid red;
-
 }
+
+
 
 #container{
-    // border: 2px solid black;
+    // border: 2px solid purple;
     font-family: myFirstFont;
-    // font-weight: 500;
+
 }
 
-// #mortgageApp{
-//     border: 2px solid blue;
-//     // font-family: myFirstFont;
-//     // font-weight: 500;
-//     padding: 1em 1.5em;
-//     // display: block;
-// }
-
 #mForm{
-    // border: 2px solid blue;
+    // border: 2px solid red;
     padding: 1em 1.5em;
+}
 
-
+#initialView{
+    border: 2px solid transparent;
+    text-align: center;
 }
 
 .boldIt{
-    // border: 2px solid blue;
     font-family: mySecondFont;
 }
+
 #mortTitle{
-    // border: 2px solid blue;
     font-size: x-large;
     // padding-top: 15px;
 }
 
 #reset{
-    // border: 2px solid blue;
     padding: 0;
     // border: none;
     background: none;
 }
 
 .form-control{
-    // border: 2px solid red;
     width: 300px;
     height: 50px;
 }
@@ -76,19 +68,36 @@
     font-family: mySecondFont;
 }
 
-#repay{
-// border: 2px solid blue;
+#radioBorder{
 width: 100%;
 }
 
+
+
 #calcResults{
-    // border: 2px solid black;
-    // font-family: myFirstFont;
-
-
+    // border: 2px solid red;
+    font-family: myFirstFont;
+    background-color: hsl(202, 55%, 16%);
+    color: white;
+    padding: 2em 1.5em;
 }
 
+.total{
+    // border: 2px solid white;
+    background-color: #0e2431;
+    border-radius: .5rem;
+    border-top: 5px solid hsl(61, 70%, 52%);
+    padding: 1rem;
+}
 
-@media (min-width: 576px) {
+#resultsFontColor{
+    color: hsl(203, 41%, 72%);
+}
 
+#mortgageAmount{
+    color: hsl(61, 70%, 52%);
+    font-family: mySecondFont;
+}
+#totalRepayment{
+    font-family: mySecondFont;
 }

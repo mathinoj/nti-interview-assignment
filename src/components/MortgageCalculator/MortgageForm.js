@@ -50,16 +50,20 @@ import CalculatedResults from "./CalculatedResults"
       <h1>Mortgage Calculator</h1>
       <button id="reset" className="btn btn-link" type="reset" onClick={() => clearInputValues()}>Clear All</button>
       <div id="mortForm" className="mortgageCalculator">
-        <div className="amount">
-          <label htmlFor="item">Mortgage Amount</label>
+        <div className="amount mb-3">
+          <label htmlFor="basic-url item" className="form-label">Mortgage Amount</label>
+          <div className="input-group">
+          <span className="input-group-text">&#163;</span>
           <input
           type="number"
+          className="form-control"
           name="newMortgageAmount"
           value={newMortgageAmount}
           onChange={e => setNewMortgageAmount(e.target.value)}
           id="item"
           // required
           />
+          </div>
           <p id="errorMortgage" className="errorMortgage" hidden>This field is required</p>
         </div>
           <div className="mortgageTerm">

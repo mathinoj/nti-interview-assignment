@@ -45,9 +45,11 @@ import "./style.scss"
 
   return(
   <>
-    <div className="mortgageApp">
-      <h1>Mortgage Calculator</h1>
-      <button id="reset" className="btn btn-link" type="reset" onClick={() => clearInputValues()}>Clear All</button>
+    <div id="mortgageApp" className="mortgageApp">
+      <div className="title mb-2">
+      <h1 className="m-1 m-0 m-md-5 fw-bold">Mortgage Calculator</h1>
+      <button id="reset" className="btn btn-link p-1 px-6 d-inline-block text-center" type="reset" onClick={() => clearInputValues()}>Clear All</button>
+      </div>
       <div id="mortForm" className="mortgageCalculator">
         <div className="amount mb-3">
           <label htmlFor="basic-url item" className="form-label">Mortgage Amount</label>
@@ -126,7 +128,8 @@ import "./style.scss"
             <p id="errorRadio" className="text-danger errorRadio" hidden>This field is required</p>
           </fieldset>
             <button className="btn btn-warning">
-              <img src="../images/icon-calculator.svg" alt="calculator icon" /><span>Calculate Payment</span>
+              <img src="../images/icon-calculator.svg" alt="calculator icon" />
+              <span>Calculate Payment</span>
             </button>
         </div>
     </div>

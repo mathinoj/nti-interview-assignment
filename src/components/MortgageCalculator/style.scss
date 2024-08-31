@@ -6,10 +6,23 @@
 .mortgage-calculator {
     max-width: 1008px;
     min-height: 606px;
-    font-family: myFirstFont;
+
     // Be sure to nest any custom classes on child elements to avoid conflicts
-    border: 2px solid black
-    // display: flex;
-    // flex-direction: row;
+    // border: 2px solid black
 
 }
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#mortgageApp{
+    // border: 2px solid black;
+    font-family: myFirstFont;
+    font-weight: 500;
+    padding: 1em 1.5em;
+    display: block;
+}
+
+

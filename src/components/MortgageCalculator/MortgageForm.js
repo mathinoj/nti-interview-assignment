@@ -64,19 +64,23 @@ import CalculatedResults from "./CalculatedResults"
           // required
           />
           </div>
-          <p id="errorMortgage" className="errorMortgage" hidden>This field is required</p>
+          <p id="errorMortgage" className="text-danger errorMortgage" hidden>This field is required</p>
         </div>
-          <div className="mortgageTerm">
-            <label htmlFor="item">Mortgage Term</label>
+          <div className="mortgageTerm mb-3">
+            <label htmlFor="basic-url item" className="form-label">Mortgage Term</label>
+            <div className="input-group">
             <input
             type="number"
+            className="form-control"
             name="mortgageTermEntered"
             value={mortgageTermEntered}
             onChange={e => setMortgageTermEntered(e.target.value)}
             id="item"
             // required
             />
-            <p id="errorTerm" className="errorTerm" hidden>This field is required</p>
+            <span className="input-group-text">Years</span>
+            </div>
+            <p id="errorTerm" className="text-danger errorTerm" hidden>This field is required</p>
           </div>
 
           <div className="interestRate">

@@ -83,19 +83,20 @@ const MortgageCalculator = ({ ...props }) => {
 	};
 	return (
 		<div id="container">
-			<div id="form">
+			{/* <div id="form"> */}
 				<form id="mForm"
-				className="mortgage-calculator d-flex flex-column flex-md-row bg-white rounded-4 w-100"
+				// className="mortgage-calculator d-flex flex-column flex-md-row bg-white rounded-4 w-100"
+				className="mortgage-calculator d-flex flex-column flex-md-row bg-white  w-100"
 				ref={formRef}
 				onSubmit={handleSubmit}
 				>
 					<MortgageForm/>
 					{/* TAKE IT AWAY! */}
 				</form>
-		</div>
-		<div id="calcResults">
-			<CalculatedResults/>
-		</div>
+			{/* </div> */}
+			<div id="calcResults">
+				<CalculatedResults/>
+			</div>
 	</div>
 	);
 };

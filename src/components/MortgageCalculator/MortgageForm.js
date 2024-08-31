@@ -45,19 +45,19 @@ import "./style.scss"
 
   return(
   <>
-    <div id="mortgageApp" className="mortgageApp">
+    {/* <div id="mortgageApp" className="mortgageApp"> */}
       <div className="title mb-2">
-      <h1 className="m-1 m-0 m-md-5 fw-bold">Mortgage Calculator</h1>
-      <button id="reset" className="btn btn-link p-1 px-6 d-inline-block text-center" type="reset" onClick={() => clearInputValues()}>Clear All</button>
+      <h1 id="mortTitle" className="boldIt mt-2 my-1 py-2">Mortgage Calculator</h1>
+      <button id="reset" className="btn btn-link" type="reset" onClick={() => clearInputValues()}>Clear All</button>
       </div>
       <div id="mortForm" className="mortgageCalculator">
         <div className="amount p-1 px-0 py-3">
           <label htmlFor="basic-url item" className="form-label">Mortgage Amount</label>
           <div className="input-group d-flex justify-content-between text-lg">
-            <span className="input-group-text font-weight-bold p-2 border-end-0 border-2">&#163;</span>
+            <span className="input-group-text border-end-0 border-2">&#163;</span>
             <input
             type="number"
-            className="form-control p-2 text-lg font-weight-bold border-start-0 border-2"
+            className="form-control p-2 border-start-0 border-2"
             name="newMortgageAmount"
             value={newMortgageAmount}
             onChange={e => setNewMortgageAmount(e.target.value)}
@@ -104,7 +104,7 @@ import "./style.scss"
         </div>
           <fieldset>
             <label>Mortgage Type</label>
-            <div className="form-control radio-control d-flex align-items-center gap-2 p-2 my-2">
+            <div id="repay" className="form-control radio-control d-flex align-items-center gap-2 p-2 my-2">
               <input
               type="radio"
               name="type"
@@ -113,9 +113,9 @@ import "./style.scss"
             // checked={radioButtonRepayment === "repayment"}
             // onChange={e => setRadioRepayment(e.target.value)}
               />
-              <label htmlFor="repayment">Repayment</label>
+              <label className="boldIt" htmlFor="repayment">Repayment</label>
             </div>
-            <div className="form-control radio-control d-flex align-items-center gap-2 p-2 my-2">
+            <div id="repay" className="form-control radio-control d-flex align-items-center gap-2 p-2 my-2">
               <input
               type="radio"
               name="type"
@@ -124,16 +124,16 @@ import "./style.scss"
             // checked={values.type === "interest-only"}
             // onChange={handleChanges}
               />
-              <label htmlFor="interest-only">Interest Only</label>
+              <label className="boldIt" htmlFor="interest-only">Interest Only</label>
             </div>
             <p id="errorRadio" className="text-danger errorRadio" hidden>This field is required</p>
           </fieldset>
-            <button className="btn btn-warning">
+            <button id="calcButton" className="btn btn-warning d-flex justify-content-center align-items-center gap-2 px-3 py-2 mx-1">
               <img src="../images/icon-calculator.svg" alt="calculator icon" />
               <span>Calculate Payment</span>
             </button>
         </div>
-    </div>
+    {/* </div> */}
   </>
   )
 }

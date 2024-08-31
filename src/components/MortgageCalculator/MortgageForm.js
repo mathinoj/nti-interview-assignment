@@ -1,5 +1,6 @@
 import { useState } from "react"
 import "./style.scss"
+import CalculatedResults from "./CalculatedResults"
 
   export default function MortgageForm(){
     let [newMortgageAmount, setNewMortgageAmount] = useState("")
@@ -8,20 +9,20 @@ import "./style.scss"
     let [interestRateEntered, setInterestRateEntered] = useState([])
 
 
-    // let x = document.getElementById("errorMortgage")
-
 
     function clearInputValues(){
       setNewMortgageAmount("")
       setMortgageTermEntered("")
       setInterestRateEntered("")
 
-      // console.log(x);
       let getMortgageMsg = document.getElementById("errorMortgage")
-      console.log(getMortgageMsg);
       let getTermMsg = document.getElementById("errorTerm")
       let getInterestMsg = document.getElementById("errorInterest")
       let getRadioMsg = document.getElementById("errorRadio")
+
+      let getResultsShownHere = document.getElementById("initialView")
+      let getShowResults = document.getElementById("showResults")
+
       if(getMortgageMsg.hidden === false){
         getMortgageMsg.setAttribute("hidden", true)
       }
@@ -33,6 +34,12 @@ import "./style.scss"
       }
       if(getRadioMsg.hidden === false){
         getRadioMsg.setAttribute("hidden", true)
+      }
+      if(getResultsShownHere.hidden === true){
+        getResultsShownHere.removeAttribute("hidden")
+      }
+      if(getShowResults.hidden === false){
+        getShowResults.setAttribute("hidden", true)
       }
     }
 

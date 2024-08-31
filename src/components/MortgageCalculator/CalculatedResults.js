@@ -3,6 +3,7 @@ import "./style.scss"
 
 export default function CalculatedResults(){
 
+
   return(
     <>
     <div id="calcRez" className="calculatedResults">

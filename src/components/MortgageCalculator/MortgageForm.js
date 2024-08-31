@@ -48,7 +48,7 @@ import CalculatedResults from "./CalculatedResults"
   <>
     <div className="mortgageApp">
       <h1>Mortgage Calculator</h1>
-      <button id="reset" type="reset" onClick={() => clearInputValues()}>Clear All</button>
+      <button id="reset" className="btn btn-link" type="reset" onClick={() => clearInputValues()}>Clear All</button>
       <div id="mortForm" className="mortgageCalculator">
         <div className="amount">
           <label htmlFor="item">Mortgage Amount</label>
@@ -120,3 +120,96 @@ import CalculatedResults from "./CalculatedResults"
   </>
   )
 }
+
+
+
+// return (
+//   <>
+//     <div className="container mortgageApp">
+//       <h1 className="text-center my-4">Mortgage Calculator</h1>
+//       <button
+//         id="reset"
+//         type="reset"
+//         className="btn btn-secondary mb-4"
+//         onClick={() => clearInputValues()}
+//       >
+//         Clear All
+//       </button>
+//       <div id="mortForm" className="mortgageCalculator">
+//         <div className="form-group">
+//           <label htmlFor="item">Mortgage Amount</label>
+//           <input
+//             type="number"
+//             className="form-control"
+//             name="newMortgageAmount"
+//             value={newMortgageAmount}
+//             onChange={(e) => setNewMortgageAmount(e.target.value)}
+//             id="item"
+//           />
+//           <p id="errorMortgage" className="text-danger errorMortgage" hidden>
+//             This field is required
+//           </p>
+//         </div>
+//         <div className="form-group">
+//           <label htmlFor="item">Mortgage Term</label>
+//           <input
+//             type="number"
+//             className="form-control"
+//             name="mortgageTermEntered"
+//             value={mortgageTermEntered}
+//             onChange={(e) => setMortgageTermEntered(e.target.value)}
+//             id="item"
+//           />
+//           <p id="errorTerm" className="text-danger errorTerm" hidden>
+//             This field is required
+//           </p>
+//         </div>
+//         <div className="form-group">
+//           <label htmlFor="item">Interest Rate</label>
+//           <input
+//             type="number"
+//             className="form-control"
+//             name="interestRateEntered"
+//             value={interestRateEntered}
+//             onChange={(e) => setInterestRateEntered(e.target.value)}
+//             id="item"
+//           />
+//           <p id="errorInterest" className="text-danger errorInterest" hidden>
+//             This field is required
+//           </p>
+//         </div>
+//         <fieldset className="form-group">
+//           <legend>Mortgage Type</legend>
+//           <div className="form-check">
+//             <input
+//               type="radio"
+//               className="form-check-input"
+//               name="type"
+//               id="repayment"
+//               value="repayment"
+//             />
+//             <label className="form-check-label" htmlFor="repayment">
+//               Repayment
+//             </label>
+//           </div>
+//           <div className="form-check">
+//             <input
+//               type="radio"
+//               className="form-check-input"
+//               name="type"
+//               id="interest-only"
+//               value="interest-only"
+//             />
+//             <label className="form-check-label" htmlFor="interest-only">
+//               Interest Only
+//             </label>
+//           </div>
+//           <p id="errorRadio" className="text-danger errorRadio" hidden>
+//             This field is required
+//           </p>
+//         </fieldset>
+//         <button className="btn btn-warning">Calculate Payment</button>
+//       </div>
+//     </div>
+//   </>
+// );

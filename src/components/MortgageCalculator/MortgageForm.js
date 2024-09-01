@@ -62,6 +62,7 @@ import "./style.scss"
             value={newMortgageAmount}
             onChange={e => setNewMortgageAmount(e.target.value)}
             id="itemMortgage"
+            min="0"
             // required
             />
           </div>
@@ -78,6 +79,7 @@ import "./style.scss"
             value={mortgageTermEntered}
             onChange={e => setMortgageTermEntered(e.target.value)}
             id="itemTerm"
+            min="1"
             // required
             />
             <span id="tabColor" className="input-group-text border-start-0">Years</span>
@@ -95,6 +97,7 @@ import "./style.scss"
             value={interestRateEntered}
             onChange={e => setInterestRateEntered(e.target.value)}
             id="itemInterest"
+            min="0"
             // required
             />
             <span id="tabColor" className="input-group-text border-start-0">%</span>

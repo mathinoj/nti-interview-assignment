@@ -8,6 +8,10 @@
     src: url('/fonts/PlusJakartaSans-bold.ttf');
 }
 
+// #mortgageReverse{
+//     display: flex;
+//     flex-direction: row-reverse;
+// }
 // *{
 //     margin: 0;
 //     padding: 0;
@@ -35,6 +39,37 @@
 .form-control:focus {
     border: 1px solid hsl(61, 70%, 52%);
   }
+
+  .form-control:focus + #tabColor {
+    background-color: hsl(61, 70%, 52%);
+    border: 1px solid hsl(61, 70%, 52%);
+  }
+  .form-control:focus + #tabColorSpecial {
+    background-color: hsl(61, 70%, 52%);
+    border: 1px solid hsl(61, 70%, 52%);
+  }
+
+//   #mortRev{
+//     display: flex;
+//     flex-direction: row-reverse;
+//     // border: 2px solid red;
+// }
+
+#tabColorSpecial{
+    // border: 2px solid red;
+    border-radius: 5px 0px 0px 5px;
+    // border-right: 0;
+}
+
+#itemMortgage{
+    // border-radius: 0px;
+    border-radius: 0px 5px 5px 0px;
+    // border-left: 0;
+}
+// #tabColor:focus {
+//     border: 1px solid hsl(61, 70%, 52%);
+//     // background-color: hsl(61, 70%, 52%);
+// }
 
 #mForm{
     // border: 2px solid red;
@@ -113,7 +148,7 @@ width: 100%;
     font-family: mySecondFont;
 }
 
-#tabColor{
+.input-group-text{
     background-color: hsl(202, 86%, 94%);
     font-family: mySecondFont;
     color: hsl(200, 24%, 40%);

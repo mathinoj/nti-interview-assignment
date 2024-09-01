@@ -53,11 +53,10 @@ import "./style.scss"
       <div id="mortForm" className="mortgageCalculator">
         <div className="amount p-1 px-0 py-3">
           <label htmlFor="basic-url item" className="form-label">Mortgage Amount</label>
-          <div className="input-group">
-            <span id="tabColor" className="input-group-text border-end-0">&#163;</span>
+          <div id="mortRev" className="input-group d-flex flex-row-reverse">
             <input
             type="number"
-            className="form-control p-2 border-start-0 shadow-none"
+            className="form-control p-2 shadow-none border-start-0"
             name="newMortgageAmount"
             value={newMortgageAmount}
             onChange={e => setNewMortgageAmount(e.target.value)}
@@ -65,6 +64,7 @@ import "./style.scss"
             min="0"
             // required
             />
+            <span id="tabColorSpecial" className="input-group-text border-end-0">&#163;</span>
           </div>
           <p id="errorMortgage" className="text-danger errorMortgage" hidden>This field is required</p>
         </div>

@@ -57,7 +57,7 @@ import "./style.scss"
             <span id="tabColor" className="input-group-text border-end-0">&#163;</span>
             <input
             type="number"
-            className="form-control p-2 border-start-0"
+            className="form-control p-2 border-start-0 shadow-none"
             name="newMortgageAmount"
             value={newMortgageAmount}
             onChange={e => setNewMortgageAmount(e.target.value)}
@@ -74,7 +74,7 @@ import "./style.scss"
             <div className="input-group">
             <input
             type="number"
-            className="form-control border-end-0"
+            className="form-control border-end-0 shadow-none"
             name="mortgageTermEntered"
             value={mortgageTermEntered}
             onChange={e => setMortgageTermEntered(e.target.value)}
@@ -92,7 +92,7 @@ import "./style.scss"
             <div className="input-group">
             <input
             type="number"
-            className="form-control border-end-0"
+            className="form-control border-end-0  shadow-none"
             name="interestRateEntered"
             value={interestRateEntered}
             onChange={e => setInterestRateEntered(e.target.value)}
@@ -107,7 +107,7 @@ import "./style.scss"
         </div>
           <fieldset>
             <label>Mortgage Type</label>
-            <div id="radioBorder" className="form-control radio-control d-flex align-items-center gap-2 p-2 my-2">
+            <div id="radioBorder" className="form-control radio-control d-flex align-items-center gap-2 p-2 my-2  shadow-none">
               <input
               type="radio"
               name="type"
@@ -118,12 +118,13 @@ import "./style.scss"
               />
               <label className="boldIt" htmlFor="repayment">Repayment</label>
             </div>
-            <div id="radioBorder" className="form-control radio-control d-flex align-items-center gap-2 p-2 my-2">
+            <div id="radioBorder" className="form-control radio-control d-flex align-items-center gap-2 p-2 my-2  shadow-none">
               <input
               type="radio"
               name="type"
               id="interest-only"
               value="interest-only"
+              shadow-none
             // checked={values.type === "interest-only"}
             // onChange={handleChanges}
               />

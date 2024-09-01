@@ -28,6 +28,13 @@
     // font-family: myFirstFont;
 
 }
+// .form-control:focus{
+//     outline: none;
+// }
+
+.form-control:focus {
+    border: 1px solid hsl(61, 70%, 52%);
+  }
 
 #mForm{
     // border: 2px solid red;

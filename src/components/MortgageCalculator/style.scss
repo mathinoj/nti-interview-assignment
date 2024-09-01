@@ -186,9 +186,19 @@ width: 100%;
         display: flex;
     }
 
+    .mortgage-calculator{
+        // border: 2px solid red;
+        position:relative;
+    //    bottom:150px;
+    //    left:10px;
+
+    }
+
+
     #mForm{
         border-radius: 20px 0px 0px 20px;
         // width: 50%;
+        // border: 2px solid red;
     }
     #calcResults{
         border-radius: 0px 20px 20px 90px;
@@ -204,7 +214,7 @@ width: 100%;
         // justify-content: space-evenly;
     }
 
-    // #x{
-    //     background-color: white;
-    // }
+    #container{
+        background-color: white;
+    }
 }

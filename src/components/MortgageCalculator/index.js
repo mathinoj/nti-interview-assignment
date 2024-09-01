@@ -76,8 +76,10 @@ const MortgageCalculator = ({ ...props }) => {
 
 			let getMortgageAmount = document.getElementById("mortgageAmount")
 			let getTotalRepayment = document.getElementById("totalRepayment")
-			getMortgageAmount.innerHTML = monthlyPayment
-			getTotalRepayment.innerHTML  = totalRepayment
+			let mortgageToPound = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(monthlyPayment);
+			let repaymentToPound = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(totalRepayment);
+			getMortgageAmount.innerHTML = mortgageToPound
+			getTotalRepayment.innerHTML  = repaymentToPound
 		}
 
 	};

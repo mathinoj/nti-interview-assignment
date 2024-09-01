@@ -45,23 +45,23 @@ import "./style.scss"
 
   return(
   <>
-    {/* <div id="mortgageApp" className="mortgageApp"> */}
-      <div className="title mb-2">
-      <h1 id="mortTitle" className="boldIt mt-2 my-1 py-2">Mortgage Calculator</h1>
-      <button id="reset" className="btn btn-link" type="reset" onClick={() => clearInputValues()}>Clear All</button>
+    <div id="mortgageApp" className="mortgageApp">
+      <div id="titleDiv" className="title mb-2">
+        <h1 id="mortTitle" className="boldIt mt-2 my-1 py-2">Mortgage Calculator</h1>
+        <button id="reset" className="btn btn-link" type="reset" onClick={() => clearInputValues()}>Clear All</button>
       </div>
       <div id="mortForm" className="mortgageCalculator">
         <div className="amount p-1 px-0 py-3">
           <label htmlFor="basic-url item" className="form-label">Mortgage Amount</label>
-          <div className="input-group d-flex justify-content-between text-lg">
-            <span className="input-group-text border-end-0 border-2">&#163;</span>
+          <div className="input-group">
+            <span id="tabColor" className="input-group-text border-end-0">&#163;</span>
             <input
             type="number"
-            className="form-control p-2 border-start-0 border-2"
+            className="form-control p-2 border-start-0"
             name="newMortgageAmount"
             value={newMortgageAmount}
             onChange={e => setNewMortgageAmount(e.target.value)}
-            id="item"
+            id="itemMortgage"
             // required
             />
           </div>
@@ -77,10 +77,10 @@ import "./style.scss"
             name="mortgageTermEntered"
             value={mortgageTermEntered}
             onChange={e => setMortgageTermEntered(e.target.value)}
-            id="item"
+            id="itemTerm"
             // required
             />
-            <span className="input-group-text border-start-0">Years</span>
+            <span id="tabColor" className="input-group-text border-start-0">Years</span>
             </div>
             <p id="errorTerm" className="text-danger errorTerm" hidden>This field is required</p>
           </div>
@@ -94,10 +94,10 @@ import "./style.scss"
             name="interestRateEntered"
             value={interestRateEntered}
             onChange={e => setInterestRateEntered(e.target.value)}
-            id="item"
+            id="itemInterest"
             // required
             />
-            <span className="input-group-text border-start-0">%</span>
+            <span id="tabColor" className="input-group-text border-start-0">%</span>
             </div>
             <p id="errorInterest" className="text-danger errorInterest" hidden>This field is required</p>
           </div>
@@ -133,7 +133,7 @@ import "./style.scss"
               <span>Calculate Payment</span>
             </button>
         </div>
-    {/* </div> */}
+    </div>
   </>
   )
 }

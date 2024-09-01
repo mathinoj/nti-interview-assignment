@@ -10,7 +10,7 @@ export default function CalculatedResults(){
     {/* <div id="calcRez" className="calculatedResults text-center"> */}
       <div id="initialView" className="first">
         <img src="../images/illustration-empty.svg" alt="calculator icon" />
-        <h1>Results shown here</h1>
+        <h1 id="resultsShowHere">Results shown here</h1>
         <p id="resultsFontColor">Complete the form and click “calculate repayments” to see what your monthly repayments would be.
 
         </p>

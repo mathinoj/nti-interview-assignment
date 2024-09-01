@@ -124,7 +124,6 @@ import "./style.scss"
               name="type"
               id="interest-only"
               value="interest-only"
-              shadow-none
             // checked={values.type === "interest-only"}
             // onChange={handleChanges}
               />

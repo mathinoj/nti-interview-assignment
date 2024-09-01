@@ -48,7 +48,20 @@
     background-color: hsl(61, 70%, 52%);
     border: 1px solid hsl(61, 70%, 52%);
   }
+  #radioBorder:hover {
+    border: 1px solid hsl(61, 70%, 52%);
+    cursor: pointer;
+  }
+  input[type="radio"]:checked ~ #radioBorder{
+    background-color: #d7da2f33;
+  }
 
+// #radioBorder{
+//     background-color: #d7da2f33;
+// }
+input[type="radio"]:checked{
+    border: 2px solid red;
+}
 //   #mortRev{
 //     display: flex;
 //     flex-direction: row-reverse;

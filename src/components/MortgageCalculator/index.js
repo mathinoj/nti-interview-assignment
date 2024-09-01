@@ -50,8 +50,11 @@ const MortgageCalculator = ({ ...props }) => {
 			errorRadio.setAttribute("hidden", true)
 		}
 
-
+		console.log(radioButtonChosen)
 		if(radioButtonChosen !== undefined && data.newMortgageAmount !== "" && data.mortgageTermEntered !== "" && data.interestRateEntered !== ""){
+
+			console.log(radioButtonChosen)
+			// radioButtonChosen.style.backgroundColor = '#d7da2f33';
 
 			let hideOnSubmit = document.getElementById('initialView')
 			hideOnSubmit.setAttribute("hidden", true)

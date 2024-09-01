@@ -142,8 +142,10 @@ width: 100%;
     }
 
     #mortgageApp{
-        // border: 2px solid red;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
 
     #titleDiv{
@@ -155,18 +157,32 @@ width: 100%;
         border-radius: 0px 0px 20px 20px;
     }
 
-    #container{
-        // display: flex;
-        // flex-direction: column;
-        // border-radius: 25px;
-    }
-    #titleDiv{
-        // display: flex;
-        // justify-content: space-between;
-        // align-items: center;
-    }
-
-    #itemMortgage{
-        // border: 2px solid red;
-    }
+  .term-rate{
+    // width: 100%;
+    display: flex;
+    // flex-grow:1;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
   }
+
+  .mortgageTerm{
+    width: 50%;
+  }
+
+  .interestRate{
+    width: 50%;
+  }
+
+  #calcButton{
+    width: auto;
+    padding: 1rem 2.5rem;
+    margin-top: 15px;
+}
+
+#calcResults {
+    padding: 2em;
+}
+
+
+}

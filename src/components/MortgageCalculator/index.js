@@ -27,12 +27,18 @@ const MortgageCalculator = ({ ...props }) => {
 		let errorInterest = document.getElementById("errorInterest")
 		let errorRadio = document.getElementById("errorRadio")
 
+		let x = document.getElementById("itemMortgage")
+		let tabColorSpecial = document.getElementById("tabColorSpecial");
 
 
 		if(data.newMortgageAmount === ""){
 			errorMortgage.removeAttribute("hidden")
+			// x.style.borderColor = 'red';
+			// tabColorSpecial.style.borderColor = 'red';
 		}else{
 			errorMortgage.setAttribute("hidden", true)
+			// x.style.borderColor = 'hsl(200, 24%, 40%)';
+			// tabColorSpecial.style.borderColor = 'hsl(200, 24%, 40%)';
 		}
 		if(data.mortgageTermEntered === ""){
 			errorTerm.removeAttribute("hidden")
@@ -50,11 +56,11 @@ const MortgageCalculator = ({ ...props }) => {
 			errorRadio.setAttribute("hidden", true)
 		}
 
-		console.log(radioButtonChosen)
+		console.log("nothing was entered")
 		if(radioButtonChosen !== undefined && data.newMortgageAmount !== "" && data.mortgageTermEntered !== "" && data.interestRateEntered !== ""){
 
-			console.log(radioButtonChosen)
-			// radioButtonChosen.style.backgroundColor = '#d7da2f33';
+
+
 
 			let hideOnSubmit = document.getElementById('initialView')
 			hideOnSubmit.setAttribute("hidden", true)

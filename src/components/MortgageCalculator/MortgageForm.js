@@ -41,7 +41,7 @@ import "./style.scss"
         getShowResults.setAttribute("hidden", true)
       }
     }
-
+console.log("anything herrr???")
 
   return(
   <>
@@ -107,6 +107,7 @@ import "./style.scss"
         </div>
           <fieldset>
             <label>Mortgage Type</label>
+
             <div id="radioBorder" className="form-control radio-control d-flex align-items-center gap-2 p-2 my-2  shadow-none">
               <input
               type="radio"

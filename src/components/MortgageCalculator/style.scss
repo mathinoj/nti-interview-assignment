@@ -36,6 +36,7 @@
 //     outline: none;
 // }
 
+// .form-control:has(input:focus) {
 .form-control:focus {
     border: 1px solid hsl(61, 70%, 52%);
   }
@@ -52,21 +53,11 @@
     border: 1px solid hsl(61, 70%, 52%);
     cursor: pointer;
   }
-  input[type="radio"]:checked ~ #radioBorder{
-    background-color: #d7da2f33;
-  }
 
-// #radioBorder{
-//     background-color: #d7da2f33;
-// }
-input[type="radio"]:checked{
-    border: 2px solid red;
-}
-//   #mortRev{
-//     display: flex;
-//     flex-direction: row-reverse;
-//     // border: 2px solid red;
-// }
+  .radio-control:has(input:checked) {
+    border: 1px solid hsl(61, 70%, 52%);
+    background-color: rgba(215, 218, 47, 0.2);
+  }
 
 #tabColorSpecial{
     // border: 2px solid red;
@@ -79,10 +70,25 @@ input[type="radio"]:checked{
     border-radius: 0px 5px 5px 0px;
     // border-left: 0;
 }
-// #tabColor:focus {
-//     border: 1px solid hsl(61, 70%, 52%);
-//     // background-color: hsl(61, 70%, 52%);
+// input[type="radio"]{
+// // .radio-control input {
+//     border: 2px solid red;
+//     // width: auto;
+//     // transform: scale(1.5);
+//     // margin: 0;
+//     // accent-color: var(--lime);
+//     // border: none;
+//     // cursor: pointer;
 // }
+
+input[type="radio"] {
+    accent-color: hsl(61, 70%, 52%);
+    width: auto;
+    transform: scale(1.5);
+    margin: 0;
+    border: none;
+    cursor: pointer;
+  }
 
 #mForm{
     // border: 2px solid red;

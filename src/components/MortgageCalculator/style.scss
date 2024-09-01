@@ -118,27 +118,15 @@ width: 100%;
     font-size: 24px;
 }
 
-// @media (min-width: 992px) {
-// }
 
 @media (min-width: 768px) {
     form{
-        // display: flex;
-        // flex-direction: column;
-        // flex-wrap: wrap;
-        // justify-content: center;
-        // border: 2px solid red;
         width: 100%;
     }
 
     #mForm{
         border-radius: 20px 20px 0px 0px;
         // width: 50%;
-        // display: flex;
-        // border: 2px solid red;
-        // flex-direction: column;
-        // justify-content: center;
-        // flex-wrap: wrap;
     }
 
     #mortgageApp{
@@ -185,4 +173,38 @@ width: 100%;
 }
 
 
+}
+
+
+@media (min-width: 1200px) {
+    #mortTitle{
+        // border: 2px solid red;
+    }
+
+    #container{
+        // border: 2px solid red;
+        display: flex;
+    }
+
+    #mForm{
+        border-radius: 20px 0px 0px 20px;
+        // width: 50%;
+    }
+    #calcResults{
+        border-radius: 0px 20px 20px 90px;
+        width: 100%;
+        // height: 100%;
+    }
+
+    #mortgageApp{
+        // border: 2px solid red;
+        // width: 100%;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: space-evenly;
+    }
+
+    // #x{
+    //     background-color: white;
+    // }
 }

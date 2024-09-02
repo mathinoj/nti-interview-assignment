@@ -18,7 +18,6 @@ export default function CalculatedResults(){
 
 
     <div id="showResults" className="second" hidden>
-      {/* <div className="total"> */}
         <div id="resultsDiv">
           <h1 id="yourResults">Your results</h1>
           <p id="resultsFontColor">Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.
@@ -36,8 +35,6 @@ export default function CalculatedResults(){
           </div>
         </div>
     </div>
-    {/* </div> */}
-
     </>
 
   )

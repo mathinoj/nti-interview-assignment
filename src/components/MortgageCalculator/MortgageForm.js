@@ -65,7 +65,7 @@ import "./style.scss"
   <>
     <div id="mortgageApp" className="mortgageApp">
       <div id="titleDiv" className="title mb-2">
-        <h1 id="mortTitle" className="boldIt mt-2 my-1 py-2">Mortgage Calculator</h1>
+        <h1 id="mortgageTitle" className="boldIt mt-2 my-1 py-2">Mortgage Calculator</h1>
         <button id="reset" className="btn btn-link" type="reset" onClick={() => clearInputValues()}>Clear All</button>
       </div>
       <div id="mortForm" className="mortgageCalculator">

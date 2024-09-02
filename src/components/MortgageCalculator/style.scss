@@ -8,16 +8,6 @@
     src: url('/fonts/PlusJakartaSans-bold.ttf');
 }
 
-// #mortgageReverse{
-//     display: flex;
-//     flex-direction: row-reverse;
-// }
-// *{
-//     margin: 0;
-//     padding: 0;
-//     box-sizing: border-box;
-//   }
-
 .mortgage-calculator {
     max-width: 1008px;
     min-height: 606px;
@@ -25,66 +15,42 @@
     // Be sure to nest any custom classes on child elements to avoid conflicts
 }
 
-
-
-#container{
-    // border: 2px solid purple;
-    // font-family: myFirstFont;
-
-}
-// .form-control:focus{
-//     outline: none;
-// }
-
-// .form-control:has(input:focus) {
 .form-control:focus {
     border: 1px solid hsl(61, 70%, 52%);
-  }
+}
 
-  .form-control:focus + #tabColor {
+.form-control:focus + #tabColor {
     background-color: hsl(61, 70%, 52%);
     border: 1px solid hsl(61, 70%, 52%);
-  }
-  .form-control:focus + #tabColor2 {
+}
+
+.form-control:focus + #tabColor2 {
     background-color: hsl(61, 70%, 52%);
     border: 1px solid hsl(61, 70%, 52%);
-  }
-  .form-control:focus + #tabColorSpecial {
+}
+
+.form-control:focus + #tabColorSpecial {
     background-color: hsl(61, 70%, 52%);
     border: 1px solid hsl(61, 70%, 52%);
-  }
-  #radioBorder:hover {
+}
+
+#radioBorder:hover {
     border: 1px solid hsl(61, 70%, 52%);
     cursor: pointer;
-  }
+}
 
-  .radio-control:has(input:checked) {
+.radio-control:has(input:checked) {
     border: 1px solid hsl(61, 70%, 52%);
     background-color: rgba(215, 218, 47, 0.2);
-  }
+}
 
 #tabColorSpecial{
-    // border: 2px solid red;
     border-radius: 5px 0px 0px 5px;
-    // border-right: 0;
 }
 
 #itemMortgage{
-    // border-radius: 0px;
     border-radius: 0px 5px 5px 0px;
-    // border-left: 0;
-    // border: red;
 }
-// input[type="radio"]{
-// // .radio-control input {
-//     border: 2px solid red;
-//     // width: auto;
-//     // transform: scale(1.5);
-//     // margin: 0;
-//     // accent-color: var(--lime);
-//     // border: none;
-//     // cursor: pointer;
-// }
 
 input[type="radio"] {
     accent-color: hsl(61, 70%, 52%);
@@ -95,12 +61,11 @@ input[type="radio"] {
     cursor: pointer;
   }
 
-#mForm{
-    // border: 2px solid red;
+#mortgage-calculator-form{
     padding: 1em 1.5em;
 }
 
-#initialView{
+#initialResultsView{
     border: 2px solid transparent;
     text-align: center;
 }
@@ -109,16 +74,14 @@ input[type="radio"] {
     font-family: mySecondFont;
 }
 
-#mortTitle{
-    font-size: x-large;
-    // padding-top: 15px;
-    // color: red;
+#mortgageTitle{
+    font-size: 24px;
 }
 
 #reset{
     padding: 0;
-    // border: none;
     background: none;
+    color: hsl(200, 24%, 40%);
 }
 
 .form-control{
@@ -129,7 +92,6 @@ input[type="radio"] {
 }
 
 #calcButton{
-    // border: 2px solid green;
     background-color: hsl(61, 70%, 52%);
     border: none;
     font-size: 18.4px;
@@ -139,13 +101,10 @@ input[type="radio"] {
 }
 
 #radioBorder{
-width: 100%;
+    width: 100%;
 }
 
-
-
 #calcResults{
-    // border: 2px solid red;
     font-family: myFirstFont;
     background-color: hsl(202, 55%, 16%);
     color: white;
@@ -153,7 +112,6 @@ width: 100%;
 }
 
 .total{
-    // border: 2px solid white;
     background-color: #0e2431;
     border-radius: .5rem;
     border-top: 5px solid hsl(61, 70%, 52%);
@@ -168,6 +126,7 @@ width: 100%;
     color: hsl(61, 70%, 52%);
     font-family: mySecondFont;
 }
+
 #totalRepayment{
     font-family: mySecondFont;
 }
@@ -191,9 +150,8 @@ width: 100%;
         width: 100%;
     }
 
-    #mForm{
+    #mortgage-calculator-form{
         border-radius: 20px 20px 0px 0px;
-        // width: 50%;
     }
 
     #mortgageApp{
@@ -208,116 +166,76 @@ width: 100%;
         justify-content: space-between;
         align-items: center;
     }
+
     #calcResults{
         border-radius: 0px 0px 20px 20px;
     }
 
-  .term-rate{
-    // width: 100%;
-    display: flex;
-    // flex-grow:1;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1.5rem;
-  }
+    .term-rate{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.5rem;
+    }
 
-  .mortgageTerm{
-    width: 50%;
-  }
+    .mortgageTerm{
+        width: 50%;
+    }
 
-  .interestRate{
-    width: 50%;
-  }
+    .interestRate{
+        width: 50%;
+    }
 
-  #calcButton{
-    width: auto;
-    padding: 1rem 2.5rem;
-    margin-top: 15px;
-}
+    #calcButton{
+        width: auto;
+        padding: 1rem 2.5rem;
+        margin-top: 15px;
+    }
 
-#calcResults {
-    padding: 2em;
-}
+    #calcResults {
+        padding: 2em;
+    }
 
-#yourResults{
-    font-size: 24px;
-    // font-family: mySecondFont;
-}
+    #yourResults{
+        font-size: 24px;
+    }
 
-#mortgageAmount{
-    // border: 2px solid red;
-    font-size: 3.25rem;
-    padding-bottom: 1rem;
-}
-
+    #mortgageAmount{
+        font-size: 3.25rem;
+        padding-bottom: 1rem;
+    }
 }
 
 
 @media (min-width: 1200px) {
-    #mortTitle{
-        // border: 2px solid red;
-    }
-
     #container{
-        // border: 2px solid red;
         display: flex;
     }
-
-    .mortgage-calculator{
-        // border: 2px solid red;
-        position:relative;
-    //    bottom:150px;
-    //    left:10px;
-
-    }
-
-
-    #mForm{
+    // .mortgage-calculator{
+    //     position:relative;
+    // }
+    #mortgage-calculator-form{
         border-radius: 20px 0px 0px 20px;
-        // width: 50%;
-        // border: 2px solid red;
     }
+
     #calcResults{
-        // border: 2px solid red;
         border-radius: 0px 20px 20px 90px;
-        // width: 100%;
-        // height: auto;
         align-content: center;
     }
 
-    #mortgageApp{
-        // border: 2px solid red;
-        // width: 100%;
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: space-evenly;
-    }
-
     #container{
-        // border: 2px solid red;
         background-color: white;
         border-radius: 20px 20px 20px 20px;
-        // width: 100%;
-        // height: auto;
     }
 
-    #initialView{
-        // border: 2px solid red;
-        // display: flex;
-        // justify-content: space-between;
-    }
-//24px
     #showResults{
-        // border: 2px solid white;
-        // width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        // align-content: space-between;
     }
+
     .total{
-        // border: 2px solid purple;
         height: 50%;
     }
 
@@ -325,10 +243,10 @@ width: 100%;
         font-size: 24px;
         font-family: mySecondFont;
     }
+
     #mortgageAmount{
         // border: 2px solid red;
         font-size: 3.25rem;
         padding-bottom: 1rem;
     }
-
 }

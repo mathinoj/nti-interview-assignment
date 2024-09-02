@@ -6,25 +6,52 @@ import "./style.scss"
     let [mortgageTermEntered, setMortgageTermEntered] = useState([])
     let [interestRateEntered, setInterestRateEntered] = useState([])
 
+  let mortStyle = document.getElementById("itemMortgage")
+  console.log("xxx");
+  console.log(mortStyle);
+
   //THESE 3 functions remove the red border onClick when inputs are empty
   function removeAmountStyle(){
     let mortStyle = document.getElementById("itemMortgage")
-    mortStyle.removeAttribute("style")
     let mortStyleTab = document.getElementById("tabColorSpecial")
+    mortStyle.removeAttribute("style")
     mortStyleTab.removeAttribute("style")
   }
   function removeTermStyle(){
     let termStyle = document.getElementById("itemTerm")
-    termStyle.removeAttribute("style")
     let termStyleTab = document.getElementById("tabColor")
+    termStyle.removeAttribute("style")
     termStyleTab.removeAttribute("style")
   }
   function removeRateStyle(){
     let rateStyle = document.getElementById("itemInterest")
-    rateStyle.removeAttribute("style")
     let rateStyleTab = document.getElementById("tabColor2")
+    rateStyle.removeAttribute("style")
     rateStyleTab.removeAttribute("style")
   }
+
+  let handleMouseOver = () => {
+    mortStyle.style.borderColor = 'red';
+  };
+  let handleMouseLeave = () => {
+    mortStyle.style.borderColor = 'hsl(200, 24%, 40%)';
+  }
+
+
+  // function changeBorderColorOnHover(elementId) {
+  //   const element = document.getElementById("itemMortgage");
+
+  //   // Add event listeners for mouseenter and mouseleave
+  //   element.addEventListener('mouseover', () => {
+  //     element.style.borderColor = 'red'; // Change border color to red on hover
+  //   });
+
+  //   element.addEventListener('mouseleave', () => {
+  //     element.style.borderColor = ''; // Reset border color to default on mouse out
+  //   });
+  // }
+  // changeBorderColorOnHover('myInput');
+
 
     //Function to clear inputs on click
     function clearInputValues(){
@@ -84,6 +111,8 @@ import "./style.scss"
             id="itemMortgage"
             onClick={removeAmountStyle}
             min="0"
+            // onMouseOver={handleMouseOver}
+            // onMouseLeave={handleMouseLeave}
             // required
             />
             <span id="tabColorSpecial" className="input-group-text border-end-0">&#163;</span>

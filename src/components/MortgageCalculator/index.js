@@ -39,7 +39,7 @@ const MortgageCalculator = ({ ...props }) => {
 			tabColorSpecial.style.borderColor = 'red';
 			tabColorSpecial.style.backgroundColor = 'red';
 			tabColorSpecial.style.color = 'white';
-			
+
 		}else{
 			errorMortgage.setAttribute("hidden", true)
 		}
@@ -67,6 +67,10 @@ const MortgageCalculator = ({ ...props }) => {
 			errorRadio.setAttribute("hidden", true)
 		}
 		//ERROR HANDLING^^^^
+
+		let mortStyle = document.getElementById("itemMortgage")
+		console.log("yyy");
+		console.log(mortStyle);
 
 		//This handles all calculations ONLY if ALL inputs/radios are NOT empty
 		if(radioButtonChosen !== undefined && data.newMortgageAmount !== "" && data.mortgageTermEntered !== "" && data.interestRateEntered !== ""){

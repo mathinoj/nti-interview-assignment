@@ -6,10 +6,6 @@ import CalculatedResults from './CalculatedResults'
 
 const MortgageCalculator = ({ ...props }) => {
 	const formRef = useRef(null);
-	// let [newMortgageAmount, setNewMortgageAmount] = useState("")
-	// let [mortgageTermEntered, setMortgageTermEntered] = useState([])
-	// let [interestRateEntered, setInterestRateEntered] = useState([])
-
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -22,6 +18,7 @@ const MortgageCalculator = ({ ...props }) => {
 		let interestRate = parseFloat(data.interestRateEntered);
 		let radioButtonChosen = data.type
 
+		//ERROR HANDLING
 		let errorMortgage = document.getElementById("errorMortgage")
 		let errorTerm = document.getElementById("errorTerm")
 		let errorInterest = document.getElementById("errorInterest")
@@ -32,10 +29,9 @@ const MortgageCalculator = ({ ...props }) => {
 
 		let termBorder = document.getElementById("itemTerm")
 		let tabColor = document.getElementById("tabColor");
-		console.log(tabColor);
-		let tabColor2 = document.getElementById("tabColor2");
 
 		let rateBorder = document.getElementById("itemInterest")
+		let tabColor2 = document.getElementById("tabColor2");
 
 		if(data.newMortgageAmount === ""){
 			errorMortgage.removeAttribute("hidden")
@@ -45,8 +41,6 @@ const MortgageCalculator = ({ ...props }) => {
 			tabColorSpecial.style.color = 'white';
 		}else{
 			errorMortgage.setAttribute("hidden", true)
-			// x.style.borderColor = 'hsl(200, 24%, 40%)';
-			// tabColorSpecial.style.borderColor = 'hsl(200, 24%, 40%)';
 		}
 		if(data.mortgageTermEntered === ""){
 			errorTerm.removeAttribute("hidden")
@@ -71,19 +65,10 @@ const MortgageCalculator = ({ ...props }) => {
 		}else{
 			errorRadio.setAttribute("hidden", true)
 		}
+		//ERROR HANDLING^^^^
 
-		console.log("nothing was entered")
+		//This handles all calculations ONLY if ALL inputs/radios are NOT empty
 		if(radioButtonChosen !== undefined && data.newMortgageAmount !== "" && data.mortgageTermEntered !== "" && data.interestRateEntered !== ""){
-
-
-
-
-			let hideOnSubmit = document.getElementById('initialResultsView')
-			hideOnSubmit.setAttribute("hidden", true)
-
-			let showResults = document.getElementById('showResults');
-			showResults.removeAttribute("hidden");
-
 			let convertInterestToPercent = interestRate/100;
 			let monthlyRate = convertInterestToPercent/12;
 			let topHalf = mortgageAmount * (monthlyRate);
@@ -99,29 +84,35 @@ const MortgageCalculator = ({ ...props }) => {
 			let monthlyTimesTerm = monthlyPayment * termTimesTwelve
 			let totalRepayment = (Math.round((monthlyTimesTerm) * 100) / 100).toFixed(2);
 
+			//This formats the currency and sets it on the screen
 			let getMortgageAmount = document.getElementById("mortgageAmount")
 			let getTotalRepayment = document.getElementById("totalRepayment")
 			let mortgageToPound = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(monthlyPayment);
 			let repaymentToPound = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(totalRepayment);
 			getMortgageAmount.innerHTML = mortgageToPound
 			getTotalRepayment.innerHTML  = repaymentToPound
+
+			//These hide/show the results
+			let hideOnSubmit = document.getElementById('initialResultsView')
+			hideOnSubmit.setAttribute("hidden", true)
+
+			let showResults = document.getElementById('showResults');
+			showResults.removeAttribute("hidden");
 		}
+
 
 	};
 	return (
 		<>
 		<div id="container">
-			{/* <div id="form"> */}
 				<form id="mortgage-calculator-form"
 				className="mortgage-calculator d-flex flex-column flex-md-row bg-white w-100"
-				// className="mortgage-calculator d-flex flex-column flex-md-row bg-white rounded-4 w-100"
 				ref={formRef}
 				onSubmit={handleSubmit}
 				>
 					<MortgageForm/>
 					{/* TAKE IT AWAY! */}
 				</form>
-			{/* </div> */}
 			<div id="calcResults">
 				<CalculatedResults/>
 			</div>

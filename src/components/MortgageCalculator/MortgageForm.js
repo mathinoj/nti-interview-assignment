@@ -3,12 +3,10 @@ import "./style.scss"
 
   export default function MortgageForm(){
     let [newMortgageAmount, setNewMortgageAmount] = useState("")
-    // let [mortgageAmountEntered, setMortgageAmountEntered] = useState([])
     let [mortgageTermEntered, setMortgageTermEntered] = useState([])
     let [interestRateEntered, setInterestRateEntered] = useState([])
 
-
-
+    //Function to clear inputs on click
     function clearInputValues(){
       setNewMortgageAmount("")
       setMortgageTermEntered("")
@@ -42,23 +40,24 @@ import "./style.scss"
       }
     }
 
-    function v(){
-    let c = document.getElementById("itemMortgage")
-    c.removeAttribute("style")
-    let t = document.getElementById("tabColorSpecial")
-    t.removeAttribute("style")
+    //THESE 3 functions remove the red border onClick when inputs are empty
+  function removeAmountStyle(){
+    let mortStyle = document.getElementById("itemMortgage")
+    mortStyle.removeAttribute("style")
+    let mortStyleTab = document.getElementById("tabColorSpecial")
+    mortStyleTab.removeAttribute("style")
   }
-  function t(){
-    let b = document.getElementById("itemTerm")
-    b.removeAttribute("style")
-    let y = document.getElementById("tabColor")
-    y.removeAttribute("style")
+  function removeTermStyle(){
+    let termStyle = document.getElementById("itemTerm")
+    termStyle.removeAttribute("style")
+    let termStyleTab = document.getElementById("tabColor")
+    termStyleTab.removeAttribute("style")
   }
-  function m(){
-    let d = document.getElementById("itemInterest")
-    d.removeAttribute("style")
-    let r = document.getElementById("tabColor2")
-    r.removeAttribute("style")
+  function removeRateStyle(){
+    let rateStyle = document.getElementById("itemInterest")
+    rateStyle.removeAttribute("style")
+    let rateStyleTab = document.getElementById("tabColor2")
+    rateStyleTab.removeAttribute("style")
   }
 
   return(
@@ -79,7 +78,7 @@ import "./style.scss"
             value={newMortgageAmount}
             onChange={e => setNewMortgageAmount(e.target.value)}
             id="itemMortgage"
-            onClick={v}
+            onClick={removeAmountStyle}
             min="0"
             // required
             />
@@ -98,7 +97,7 @@ import "./style.scss"
             value={mortgageTermEntered}
             onChange={e => setMortgageTermEntered(e.target.value)}
             id="itemTerm"
-            onClick={t}
+            onClick={removeTermStyle}
             min="1"
             // required
             />
@@ -117,7 +116,7 @@ import "./style.scss"
             value={interestRateEntered}
             onChange={e => setInterestRateEntered(e.target.value)}
             id="itemInterest"
-            onClick={m}
+            onClick={removeRateStyle}
             min="0"
             // required
             />
@@ -135,8 +134,6 @@ import "./style.scss"
               name="type"
               id="repayment"
               value="repayment"
-            // checked={radioButtonRepayment === "repayment"}
-            // onChange={e => setRadioRepayment(e.target.value)}
               />
               <label className="boldIt" htmlFor="repayment">Repayment</label>
             </div>
@@ -146,8 +143,6 @@ import "./style.scss"
               name="type"
               id="interest-only"
               value="interest-only"
-            // checked={values.type === "interest-only"}
-            // onChange={handleChanges}
               />
               <label className="boldIt" htmlFor="interest-only">Interest Only</label>
             </div>
@@ -162,96 +157,3 @@ import "./style.scss"
   </>
   )
 }
-
-
-
-// return (
-//   <>
-//     <div className="container mortgageApp">
-//       <h1 className="text-center my-4">Mortgage Calculator</h1>
-//       <button
-//         id="reset"
-//         type="reset"
-//         className="btn btn-secondary mb-4"
-//         onClick={() => clearInputValues()}
-//       >
-//         Clear All
-//       </button>
-//       <div id="mortForm" className="mortgageCalculator">
-//         <div className="form-group">
-//           <label htmlFor="item">Mortgage Amount</label>
-//           <input
-//             type="number"
-//             className="form-control"
-//             name="newMortgageAmount"
-//             value={newMortgageAmount}
-//             onChange={(e) => setNewMortgageAmount(e.target.value)}
-//             id="item"
-//           />
-//           <p id="errorMortgage" className="text-danger errorMortgage" hidden>
-//             This field is required
-//           </p>
-//         </div>
-//         <div className="form-group">
-//           <label htmlFor="item">Mortgage Term</label>
-//           <input
-//             type="number"
-//             className="form-control"
-//             name="mortgageTermEntered"
-//             value={mortgageTermEntered}
-//             onChange={(e) => setMortgageTermEntered(e.target.value)}
-//             id="item"
-//           />
-//           <p id="errorTerm" className="text-danger errorTerm" hidden>
-//             This field is required
-//           </p>
-//         </div>
-//         <div className="form-group">
-//           <label htmlFor="item">Interest Rate</label>
-//           <input
-//             type="number"
-//             className="form-control"
-//             name="interestRateEntered"
-//             value={interestRateEntered}
-//             onChange={(e) => setInterestRateEntered(e.target.value)}
-//             id="item"
-//           />
-//           <p id="errorInterest" className="text-danger errorInterest" hidden>
-//             This field is required
-//           </p>
-//         </div>
-//         <fieldset className="form-group">
-//           <legend>Mortgage Type</legend>
-//           <div className="form-check">
-//             <input
-//               type="radio"
-//               className="form-check-input"
-//               name="type"
-//               id="repayment"
-//               value="repayment"
-//             />
-//             <label className="form-check-label" htmlFor="repayment">
-//               Repayment
-//             </label>
-//           </div>
-//           <div className="form-check">
-//             <input
-//               type="radio"
-//               className="form-check-input"
-//               name="type"
-//               id="interest-only"
-//               value="interest-only"
-//             />
-//             <label className="form-check-label" htmlFor="interest-only">
-//               Interest Only
-//             </label>
-//           </div>
-//           <p id="errorRadio" className="text-danger errorRadio" hidden>
-//             This field is required
-//           </p>
-//         </fieldset>
-//         <button className="btn btn-warning">Calculate Payment</button>
-//       </div>
-//     </div>
-//   </>
-// );

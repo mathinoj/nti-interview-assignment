@@ -6,11 +6,35 @@ import "./style.scss"
     let [mortgageTermEntered, setMortgageTermEntered] = useState([])
     let [interestRateEntered, setInterestRateEntered] = useState([])
 
+  //THESE 3 functions remove the red border onClick when inputs are empty
+  function removeAmountStyle(){
+    let mortStyle = document.getElementById("itemMortgage")
+    mortStyle.removeAttribute("style")
+    let mortStyleTab = document.getElementById("tabColorSpecial")
+    mortStyleTab.removeAttribute("style")
+  }
+  function removeTermStyle(){
+    let termStyle = document.getElementById("itemTerm")
+    termStyle.removeAttribute("style")
+    let termStyleTab = document.getElementById("tabColor")
+    termStyleTab.removeAttribute("style")
+  }
+  function removeRateStyle(){
+    let rateStyle = document.getElementById("itemInterest")
+    rateStyle.removeAttribute("style")
+    let rateStyleTab = document.getElementById("tabColor2")
+    rateStyleTab.removeAttribute("style")
+  }
+
     //Function to clear inputs on click
     function clearInputValues(){
       setNewMortgageAmount("")
       setMortgageTermEntered("")
       setInterestRateEntered("")
+
+      removeAmountStyle()
+      removeTermStyle()
+      removeRateStyle()
 
       let getMortgageMsg = document.getElementById("errorMortgage")
       let getTermMsg = document.getElementById("errorTerm")
@@ -39,26 +63,6 @@ import "./style.scss"
         getShowResults.setAttribute("hidden", true)
       }
     }
-
-    //THESE 3 functions remove the red border onClick when inputs are empty
-  function removeAmountStyle(){
-    let mortStyle = document.getElementById("itemMortgage")
-    mortStyle.removeAttribute("style")
-    let mortStyleTab = document.getElementById("tabColorSpecial")
-    mortStyleTab.removeAttribute("style")
-  }
-  function removeTermStyle(){
-    let termStyle = document.getElementById("itemTerm")
-    termStyle.removeAttribute("style")
-    let termStyleTab = document.getElementById("tabColor")
-    termStyleTab.removeAttribute("style")
-  }
-  function removeRateStyle(){
-    let rateStyle = document.getElementById("itemInterest")
-    rateStyle.removeAttribute("style")
-    let rateStyleTab = document.getElementById("tabColor2")
-    rateStyleTab.removeAttribute("style")
-  }
 
   return(
   <>

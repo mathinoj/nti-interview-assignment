@@ -39,6 +39,7 @@ const MortgageCalculator = ({ ...props }) => {
 			tabColorSpecial.style.borderColor = 'red';
 			tabColorSpecial.style.backgroundColor = 'red';
 			tabColorSpecial.style.color = 'white';
+			
 		}else{
 			errorMortgage.setAttribute("hidden", true)
 		}

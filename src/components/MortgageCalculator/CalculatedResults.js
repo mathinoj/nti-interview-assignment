@@ -7,7 +7,6 @@ export default function CalculatedResults(){
 
   return(
     <>
-    {/* <div id="calcRez" className="calculatedResults text-center"> */}
       <div id="initialResultsView" className="first">
         <img src="../images/illustration-empty.svg" alt="calculator icon" />
         <h1 id="resultsShowHere">Results shown here</h1>

@@ -209,6 +209,8 @@ input[type="radio"] {
         display: flex;
         background-color: white;
         border-radius: 20px 20px 20px 20px;
+        border: 2px solid purple;
+
     }
     // .mortgage-calculator{
     //     position:relative;
@@ -220,6 +222,8 @@ input[type="radio"] {
     #calcResults{
         border-radius: 0px 20px 20px 90px;
         align-content: center;
+        border: 2px solid red;
+        width: 100%;
     }
 
     #showResults{

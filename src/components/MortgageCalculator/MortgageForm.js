@@ -19,7 +19,7 @@ import "./style.scss"
       let getInterestMsg = document.getElementById("errorInterest")
       let getRadioMsg = document.getElementById("errorRadio")
 
-      let getResultsShownHere = document.getElementById("initialView")
+      let getResultsShownHere = document.getElementById("initialResultsView")
       let getShowResults = document.getElementById("showResults")
 
       if(getMortgageMsg.hidden === false){

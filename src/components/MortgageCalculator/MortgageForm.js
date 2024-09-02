@@ -41,7 +41,25 @@ import "./style.scss"
         getShowResults.setAttribute("hidden", true)
       }
     }
-console.log("anything herrr???")
+
+    function v(){
+    let c = document.getElementById("itemMortgage")
+    c.removeAttribute("style")
+    let t = document.getElementById("tabColorSpecial")
+    t.removeAttribute("style")
+  }
+  function t(){
+    let b = document.getElementById("itemTerm")
+    b.removeAttribute("style")
+    let y = document.getElementById("tabColor")
+    y.removeAttribute("style")
+  }
+  function m(){
+    let d = document.getElementById("itemInterest")
+    d.removeAttribute("style")
+    let r = document.getElementById("tabColor2")
+    r.removeAttribute("style")
+  }
 
   return(
   <>
@@ -61,6 +79,7 @@ console.log("anything herrr???")
             value={newMortgageAmount}
             onChange={e => setNewMortgageAmount(e.target.value)}
             id="itemMortgage"
+            onClick={v}
             min="0"
             // required
             />
@@ -79,6 +98,7 @@ console.log("anything herrr???")
             value={mortgageTermEntered}
             onChange={e => setMortgageTermEntered(e.target.value)}
             id="itemTerm"
+            onClick={t}
             min="1"
             // required
             />
@@ -97,10 +117,11 @@ console.log("anything herrr???")
             value={interestRateEntered}
             onChange={e => setInterestRateEntered(e.target.value)}
             id="itemInterest"
+            onClick={m}
             min="0"
             // required
             />
-            <span id="tabColor" className="input-group-text border-start-0">%</span>
+            <span id="tabColor2" className="input-group-text border-start-0">%</span>
             </div>
             <p id="errorInterest" className="text-danger errorInterest" hidden>This field is required</p>
           </div>

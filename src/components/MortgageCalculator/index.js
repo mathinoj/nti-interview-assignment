@@ -27,14 +27,22 @@ const MortgageCalculator = ({ ...props }) => {
 		let errorInterest = document.getElementById("errorInterest")
 		let errorRadio = document.getElementById("errorRadio")
 
-		let x = document.getElementById("itemMortgage")
+		let mortBorder = document.getElementById("itemMortgage")
 		let tabColorSpecial = document.getElementById("tabColorSpecial");
 
+		let termBorder = document.getElementById("itemTerm")
+		let tabColor = document.getElementById("tabColor");
+		console.log(tabColor);
+		let tabColor2 = document.getElementById("tabColor2");
+
+		let rateBorder = document.getElementById("itemInterest")
 
 		if(data.newMortgageAmount === ""){
 			errorMortgage.removeAttribute("hidden")
-			// x.style.borderColor = 'red';
-			// tabColorSpecial.style.borderColor = 'red';
+			mortBorder.style.borderColor = 'red';
+			tabColorSpecial.style.borderColor = 'red';
+			tabColorSpecial.style.backgroundColor = 'red';
+			tabColorSpecial.style.color = 'white';
 		}else{
 			errorMortgage.setAttribute("hidden", true)
 			// x.style.borderColor = 'hsl(200, 24%, 40%)';
@@ -42,11 +50,19 @@ const MortgageCalculator = ({ ...props }) => {
 		}
 		if(data.mortgageTermEntered === ""){
 			errorTerm.removeAttribute("hidden")
+			termBorder.style.borderColor = 'red';
+			tabColor.style.borderColor = 'red';
+			tabColor.style.backgroundColor = 'red';
+			tabColor.style.color = 'white';
 		}else{
 			errorTerm.setAttribute("hidden", true)
 		}
 		if(data.interestRateEntered === ""){
 			errorInterest.removeAttribute("hidden")
+			rateBorder.style.borderColor = 'red';
+			tabColor2.style.borderColor = 'red';
+			tabColor2.style.backgroundColor = 'red';
+			tabColor2.style.color = 'white';
 		}else{
 			errorInterest.setAttribute("hidden", true)
 		}

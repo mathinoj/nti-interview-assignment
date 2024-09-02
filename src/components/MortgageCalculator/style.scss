@@ -45,6 +45,10 @@
     background-color: hsl(61, 70%, 52%);
     border: 1px solid hsl(61, 70%, 52%);
   }
+  .form-control:focus + #tabColor2 {
+    background-color: hsl(61, 70%, 52%);
+    border: 1px solid hsl(61, 70%, 52%);
+  }
   .form-control:focus + #tabColorSpecial {
     background-color: hsl(61, 70%, 52%);
     border: 1px solid hsl(61, 70%, 52%);
@@ -69,6 +73,7 @@
     // border-radius: 0px;
     border-radius: 0px 5px 5px 0px;
     // border-left: 0;
+    // border: red;
 }
 // input[type="radio"]{
 // // .radio-control input {

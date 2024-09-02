@@ -78,7 +78,7 @@ const MortgageCalculator = ({ ...props }) => {
 
 
 
-			let hideOnSubmit = document.getElementById('initialView')
+			let hideOnSubmit = document.getElementById('initialResultsView')
 			hideOnSubmit.setAttribute("hidden", true)
 
 			let showResults = document.getElementById('showResults');

@@ -169,6 +169,7 @@ input[type="radio"] {
 
     #calcResults{
         border-radius: 0px 0px 20px 20px;
+        padding: 2em;
     }
 
     .term-rate{
@@ -192,10 +193,6 @@ input[type="radio"] {
         margin-top: 15px;
     }
 
-    #calcResults {
-        padding: 2em;
-    }
-
     #yourResults{
         font-size: 24px;
     }
@@ -210,6 +207,8 @@ input[type="radio"] {
 @media (min-width: 1200px) {
     #container{
         display: flex;
+        background-color: white;
+        border-radius: 20px 20px 20px 20px;
     }
     // .mortgage-calculator{
     //     position:relative;
@@ -221,11 +220,6 @@ input[type="radio"] {
     #calcResults{
         border-radius: 0px 20px 20px 90px;
         align-content: center;
-    }
-
-    #container{
-        background-color: white;
-        border-radius: 20px 20px 20px 20px;
     }
 
     #showResults{
@@ -245,7 +239,6 @@ input[type="radio"] {
     }
 
     #mortgageAmount{
-        // border: 2px solid red;
         font-size: 3.25rem;
         padding-bottom: 1rem;
     }

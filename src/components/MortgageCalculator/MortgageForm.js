@@ -45,6 +45,8 @@ import "./style.scss"
       removeTermStyle()
       removeRateStyle()
 
+
+
       let getMortgageMsg = document.getElementById("errorMortgage")
       let getTermMsg = document.getElementById("errorTerm")
       let getInterestMsg = document.getElementById("errorInterest")
@@ -73,9 +75,7 @@ import "./style.scss"
       }
     }
 
-    let mortStyle = document.getElementById("itemMortgage")
-    console.log("mortgageForm");
-    console.log(mortStyle);
+
 
   return(
   <>
@@ -97,8 +97,8 @@ import "./style.scss"
             id="itemMortgage"
             onClick={removeAmountStyle}
             min="0"
-            // onMouseOver={handleMouseOver}
-            // onMouseLeave={handleMouseLeave}
+            // onMouseMove={handleMouseOver}
+            // onMouseOut={handleMouseLeave}
             // required
             />
             <span id="tabColorSpecial" className="input-group-text border-end-0">&#163;</span>

@@ -67,20 +67,6 @@ const MortgageCalculator = ({ ...props }) => {
 		}
 		//ERROR HANDLING^^^^
 
-		let mortStyle = document.getElementById("itemMortgage")
-		let p = mortStyle.getAttribute("style")
-
-		if(p === "border-color: red;"){
-			mortStyle.addEventListener('mouseenter', () => {
-				mortStyle.style.borderColor = 'hsl(200, 24%, 40%)';
-				tabColorSpecial.style.borderColor = 'hsl(200, 24%, 40%)';
-			});
-			mortStyle.addEventListener('mouseleave', () => {
-				mortStyle.style.borderColor = 'red';
-				tabColorSpecial.style.borderColor = 'red';
-			});
-		}
-
 
 		//This handles all calculations ONLY if ALL inputs/radios are NOT empty
 		if(radioButtonChosen !== undefined && data.newMortgageAmount !== "" && data.mortgageTermEntered !== "" && data.interestRateEntered !== ""){

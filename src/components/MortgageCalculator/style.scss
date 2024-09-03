@@ -15,34 +15,32 @@
     // Be sure to nest any custom classes on child elements to avoid conflicts
 }
 
+// #itemMortgage:hover {
+//     border: 1px solid hsl(200, 24%, 40%);
+//     border-left: 0;
+// }
+// #itemTerm:hover {
+//     border: 1px solid hsl(200, 24%, 40%);
+//     border-right: 0;
+// }
+// #itemInterest:hover {
+//     border: 1px solid hsl(200, 24%, 40%);
+//     border-right: 0;
+// }
 
-#itemMortgage:hover {
-    border: 1px solid hsl(200, 24%, 40%) !important;
-    border-left: 0 !important;
-}
-#itemTerm:hover {
-    border: 1px solid hsl(200, 24%, 40%) !important;
-    border-right: 0 !important;
-}
-#itemInterest:hover {
-    border: 1px solid hsl(200, 24%, 40%) !important;
-    border-right: 0 !important;
-}
+// .form-control:hover + #tabColor {
+//     border: 1px solid hsl(200, 24%, 40%);
+//     // border-radius: 5px 0px 0px 5px;
+// }
 
-.form-control:hover + #tabColor {
-    border: 1px solid hsl(200, 24%, 40%) !important;
-    // border-radius: 5px 0px 0px 5px;
+// .form-control:hover + #tabColor2 {
+//     border: 1px solid hsl(200, 24%, 40%);
+// }
 
-}
-
-.form-control:hover + #tabColor2 {
-    border: 1px solid hsl(200, 24%, 40%) !important;
-}
-
-.form-control:hover + #tabColorSpecial {
-    border: 1px solid hsl(200, 24%, 40%) !important;
-    border-right: 0 !important;
-}
+// .form-control:hover + #tabColorSpecial {
+//     border: 1px solid hsl(200, 24%, 40%);
+//     border-right: 0;
+// }
 
 .form-control:focus {
     border: 1px solid hsl(61, 70%, 52%);
@@ -73,14 +71,6 @@
     background-color: rgba(215, 218, 47, 0.2);
 }
 
-#tabColorSpecial{
-    border-radius: 5px 0px 0px 5px;
-}
-
-#itemMortgage{
-    border-radius: 0px 5px 5px 0px;
-}
-
 input[type="radio"] {
     accent-color: hsl(61, 70%, 52%);
     width: auto;
@@ -89,6 +79,14 @@ input[type="radio"] {
     border: none;
     cursor: pointer;
   }
+
+#tabColorSpecial{
+    border-radius: 5px 0px 0px 5px;
+}
+
+#itemMortgage{
+    border-radius: 0px 5px 5px 0px;
+}
 
 #mortgage-calculator-form{
     padding: 1em 1.5em;

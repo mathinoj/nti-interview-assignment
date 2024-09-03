@@ -6,10 +6,6 @@ import "./style.scss"
     let [mortgageTermEntered, setMortgageTermEntered] = useState([])
     let [interestRateEntered, setInterestRateEntered] = useState([])
 
-  let mortStyle = document.getElementById("itemMortgage")
-  console.log("xxx");
-  console.log(mortStyle);
-
   //THESE 3 functions remove the red border onClick when inputs are empty
   function removeAmountStyle(){
     let mortStyle = document.getElementById("itemMortgage")
@@ -30,28 +26,14 @@ import "./style.scss"
     rateStyleTab.removeAttribute("style")
   }
 
-  let handleMouseOver = () => {
-    mortStyle.style.borderColor = 'red';
-  };
-  let handleMouseLeave = () => {
-    mortStyle.style.borderColor = 'hsl(200, 24%, 40%)';
-  }
-
-
-  // function changeBorderColorOnHover(elementId) {
-  //   const element = document.getElementById("itemMortgage");
-
-  //   // Add event listeners for mouseenter and mouseleave
-  //   element.addEventListener('mouseover', () => {
-  //     element.style.borderColor = 'red'; // Change border color to red on hover
-  //   });
-
-  //   element.addEventListener('mouseleave', () => {
-  //     element.style.borderColor = ''; // Reset border color to default on mouse out
-  //   });
+  //   let handleMouseOver = () => {
+  //     let mortStyle = document.getElementById("itemMortgage")
+  //     mortStyle.style.borderColor = 'hsl(200, 24%, 40%)';
+  // };
+  // let handleMouseLeave = () => {
+  //   let mortStyle = document.getElementById("itemMortgage")
+  //   mortStyle.style.borderColor = 'red';
   // }
-  // changeBorderColorOnHover('myInput');
-
 
     //Function to clear inputs on click
     function clearInputValues(){
@@ -90,6 +72,10 @@ import "./style.scss"
         getShowResults.setAttribute("hidden", true)
       }
     }
+
+    let mortStyle = document.getElementById("itemMortgage")
+    console.log("mortgageForm");
+    console.log(mortStyle);
 
   return(
   <>

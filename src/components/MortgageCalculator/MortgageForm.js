@@ -7,32 +7,20 @@ import "./style.scss"
     let [interestRateEntered, setInterestRateEntered] = useState([])
 
   //THESE 3 functions remove the red border onClick when inputs are empty
-  let x = document.getElementById("itemMortgage")
-  console.log(x);
 
   function removeAmountStyle(){
     let mortStyle = document.getElementById("itemMortgage2")
     let mortStyleTab = document.getElementById("tabColorSpecial2")
-    // console.log(mortStyle.id);
-    // let mortStyleId = mortStyle.id;
-    // if(mortStyle.id === "itemMortgage2"){
-    //   console.log("this is treu!");
-      // mortStyle.id = "itemMortgage"
-      // mortStyleTab.id = "tabColorSpecial"
-    // }
-
   }
   function removeTermStyle(){
     let termStyle = document.getElementById("itemTerm2")
     let termStyleTab = document.getElementById("tabColorAgain")
-    // termStyle.id = "itemTerm"
-    // termStyleTab.id = "tabColor"
+
   }
   function removeRateStyle(){
     let rateStyle = document.getElementById("itemInterest2")
     let rateStyleTab = document.getElementById("tabColor3")
-    // rateStyle.id = "itemInterest"
-    // rateStyleTab.id = "tabColor2"
+
   }
   console.log(newMortgageAmount)
 

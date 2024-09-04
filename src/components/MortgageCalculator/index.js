@@ -69,37 +69,32 @@ const MortgageCalculator = ({ ...props }) => {
 
 		//This handles all calculations ONLY if ALL inputs/radios are NOT empty
 		if(radioButtonChosen !== undefined && data.newMortgageAmount !== "" && data.mortgageTermEntered !== "" && data.interestRateEntered !== ""){
-			// mortBorder.id = "itemMortgage2"
-			// tabColorSpecial.id = "tabColorSpecial2"
-			let u = document.getElementById("itemMortgage2").id;
-			console.log(u);
-			let i = document.getElementById("tabColorSpecial2").id;
-			if(u !== "itemMortgage" && i !== "tabColorSpecial"){
-			let x = document.getElementById("itemMortgage2")
-			let y = document.getElementById("tabColorSpecial2")
-			x.id = "itemMortgage"
-			y.id = "tabColorSpecial"
+
+			let getNewMortIdInput = document.getElementById("itemMortgage2").id;
+			let getNewTabPound = document.getElementById("tabColorSpecial2").id;
+			if(getNewMortIdInput !== "itemMortgage" && getNewTabPound !== "tabColorSpecial"){
+			let changeMortId = document.getElementById("itemMortgage2")
+			let changePoundId = document.getElementById("tabColorSpecial2")
+			changeMortId.id = "itemMortgage"
+			changePoundId.id = "tabColorSpecial"
 			}
 
-			let t = document.getElementById("itemTerm2").id;
-			let r = document.getElementById("tabColorAgain").id;
-			// if(u.id !== "itemMortgage" && i.id !== "tabColorSpecial"){
-			if(t !== "itemTerm" && r !== "tabColor"){
-			let a = document.getElementById("itemTerm2")
-			let b = document.getElementById("tabColorAgain")
-			a.id = "itemTerm"
-			b.id = "tabColor"
+			let getNewTermInput = document.getElementById("itemTerm2").id;
+			let getNewYearsTab = document.getElementById("tabColorAgain").id;
+			if(getNewTermInput !== "itemTerm" && getNewYearsTab !== "tabColor"){
+			let changeTermId = document.getElementById("itemTerm2")
+			let changeYearsTab = document.getElementById("tabColorAgain")
+			changeTermId.id = "itemTerm"
+			changeYearsTab.id = "tabColor"
 			}
 
-			let o = document.getElementById("itemInterest2").id;
-			let p = document.getElementById("tabColor3").id;
-			if(o !== "itemInterest" && p !== "tabColor2"){
-			let c = document.getElementById("itemInterest2")
-			let d = document.getElementById("tabColor3")
-			c.id = "itemInterest"
-			d.id = "tabColor2"
-			// rateBorder.id = "itemInterest2"
-			// tabColor2.id = "tabColor3"
+			let getNewInterestInput = document.getElementById("itemInterest2").id;
+			let getNewRateTab = document.getElementById("tabColor3").id;
+			if(getNewInterestInput !== "itemInterest" && getNewRateTab !== "tabColor2"){
+			let changeRateId = document.getElementById("itemInterest2")
+			let changeTermId = document.getElementById("tabColor3")
+			changeRateId.id = "itemInterest"
+			changeTermId.id = "tabColor2"
 		}
 
 			let convertInterestToPercent = interestRate/100;

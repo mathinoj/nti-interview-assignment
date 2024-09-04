@@ -13,6 +13,8 @@ const MortgageCalculator = ({ ...props }) => {
 		const data = Object.fromEntries(formData.entries());
 		console.log(data);
 
+		console.log(data.newMortgageAmount)
+
 		let mortgageAmount = parseFloat(data.newMortgageAmount);
 		let mortgageTerm = parseFloat(data.mortgageTermEntered);
 		let interestRate = parseFloat(data.interestRateEntered);
@@ -35,28 +37,26 @@ const MortgageCalculator = ({ ...props }) => {
 
 		if(data.newMortgageAmount === ""){
 			errorMortgage.removeAttribute("hidden")
-			mortBorder.style.borderColor = 'red';
-			tabColorSpecial.style.borderColor = 'red';
-			tabColorSpecial.style.backgroundColor = 'red';
-			tabColorSpecial.style.color = 'white';
+			mortBorder.id = "itemMortgage2"
+			tabColorSpecial.id = "tabColorSpecial2"
 		}else{
 			errorMortgage.setAttribute("hidden", true)
 		}
 		if(data.mortgageTermEntered === ""){
 			errorTerm.removeAttribute("hidden")
-			termBorder.style.borderColor = 'red';
-			tabColor.style.borderColor = 'red';
-			tabColor.style.backgroundColor = 'red';
-			tabColor.style.color = 'white';
+			termBorder.id = "itemTerm2"
+			tabColor.id = "tabColorAgain"
 		}else{
 			errorTerm.setAttribute("hidden", true)
 		}
 		if(data.interestRateEntered === ""){
 			errorInterest.removeAttribute("hidden")
-			rateBorder.style.borderColor = 'red';
-			tabColor2.style.borderColor = 'red';
-			tabColor2.style.backgroundColor = 'red';
-			tabColor2.style.color = 'white';
+			rateBorder.id = "itemInterest2"
+			tabColor2.id = "tabColor3"
+			// rateBorder.style.borderColor = 'red';
+			// tabColor2.style.borderColor = 'red';
+			// tabColor2.style.backgroundColor = 'red';
+			// tabColor2.style.color = 'white';
 		}else{
 			errorInterest.setAttribute("hidden", true)
 		}
@@ -66,6 +66,12 @@ const MortgageCalculator = ({ ...props }) => {
 			errorRadio.setAttribute("hidden", true)
 		}
 		//ERROR HANDLING^^^^
+
+		console.log("helllo");
+		console.log(mortgageAmount);
+		if(mortgageAmount === ""){
+			console.log("byee");
+		}
 
 
 		//This handles all calculations ONLY if ALL inputs/radios are NOT empty

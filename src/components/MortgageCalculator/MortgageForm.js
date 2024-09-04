@@ -7,33 +7,34 @@ import "./style.scss"
     let [interestRateEntered, setInterestRateEntered] = useState([])
 
   //THESE 3 functions remove the red border onClick when inputs are empty
+  let x = document.getElementById("itemMortgage")
+  console.log(x);
+  console.log("helllo");
+  console.log(newMortgageAmount);
   function removeAmountStyle(){
-    let mortStyle = document.getElementById("itemMortgage")
+    let mortStyle = document.getElementsByClassName("form-control")
     let mortStyleTab = document.getElementById("tabColorSpecial")
     mortStyle.removeAttribute("style")
     mortStyleTab.removeAttribute("style")
+    console.log(mortStyle);
   }
   function removeTermStyle(){
+    // if(mortgageTermEntered === ""){
     let termStyle = document.getElementById("itemTerm")
     let termStyleTab = document.getElementById("tabColor")
     termStyle.removeAttribute("style")
     termStyleTab.removeAttribute("style")
+    // }
   }
   function removeRateStyle(){
+    // if(interestRateEntered === ""){
     let rateStyle = document.getElementById("itemInterest")
     let rateStyleTab = document.getElementById("tabColor2")
     rateStyle.removeAttribute("style")
     rateStyleTab.removeAttribute("style")
+    // }
   }
-
-  //   let handleMouseOver = () => {
-  //     let mortStyle = document.getElementById("itemMortgage")
-  //     mortStyle.style.borderColor = 'hsl(200, 24%, 40%)';
-  // };
-  // let handleMouseLeave = () => {
-  //   let mortStyle = document.getElementById("itemMortgage")
-  //   mortStyle.style.borderColor = 'red';
-  // }
+  console.log(newMortgageAmount)
 
     //Function to clear inputs on click
     function clearInputValues(){

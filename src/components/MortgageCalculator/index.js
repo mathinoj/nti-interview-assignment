@@ -67,15 +67,41 @@ const MortgageCalculator = ({ ...props }) => {
 		}
 		//ERROR HANDLING^^^^
 
-		console.log("helllo");
-		console.log(mortgageAmount);
-		if(mortgageAmount === ""){
-			console.log("byee");
-		}
-
-
 		//This handles all calculations ONLY if ALL inputs/radios are NOT empty
 		if(radioButtonChosen !== undefined && data.newMortgageAmount !== "" && data.mortgageTermEntered !== "" && data.interestRateEntered !== ""){
+			// mortBorder.id = "itemMortgage2"
+			// tabColorSpecial.id = "tabColorSpecial2"
+			let u = document.getElementById("itemMortgage2").id;
+			console.log(u);
+			let i = document.getElementById("tabColorSpecial2").id;
+			if(u !== "itemMortgage" && i !== "tabColorSpecial"){
+			let x = document.getElementById("itemMortgage2")
+			let y = document.getElementById("tabColorSpecial2")
+			x.id = "itemMortgage"
+			y.id = "tabColorSpecial"
+			}
+
+			let t = document.getElementById("itemTerm2").id;
+			let r = document.getElementById("tabColorAgain").id;
+			// if(u.id !== "itemMortgage" && i.id !== "tabColorSpecial"){
+			if(t !== "itemTerm" && r !== "tabColor"){
+			let a = document.getElementById("itemTerm2")
+			let b = document.getElementById("tabColorAgain")
+			a.id = "itemTerm"
+			b.id = "tabColor"
+			}
+
+			let o = document.getElementById("itemInterest2").id;
+			let p = document.getElementById("tabColor3").id;
+			if(o !== "itemInterest" && p !== "tabColor2"){
+			let c = document.getElementById("itemInterest2")
+			let d = document.getElementById("tabColor3")
+			c.id = "itemInterest"
+			d.id = "tabColor2"
+			// rateBorder.id = "itemInterest2"
+			// tabColor2.id = "tabColor3"
+		}
+
 			let convertInterestToPercent = interestRate/100;
 			let monthlyRate = convertInterestToPercent/12;
 			let topHalf = mortgageAmount * (monthlyRate);

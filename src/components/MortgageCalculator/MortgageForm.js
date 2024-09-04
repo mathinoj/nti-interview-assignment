@@ -9,30 +9,30 @@ import "./style.scss"
   //THESE 3 functions remove the red border onClick when inputs are empty
   let x = document.getElementById("itemMortgage")
   console.log(x);
-  console.log("helllo");
-  console.log(newMortgageAmount);
+
   function removeAmountStyle(){
-    let mortStyle = document.getElementsByClassName("form-control")
-    let mortStyleTab = document.getElementById("tabColorSpecial")
-    mortStyle.removeAttribute("style")
-    mortStyleTab.removeAttribute("style")
-    console.log(mortStyle);
+    let mortStyle = document.getElementById("itemMortgage2")
+    let mortStyleTab = document.getElementById("tabColorSpecial2")
+    // console.log(mortStyle.id);
+    // let mortStyleId = mortStyle.id;
+    // if(mortStyle.id === "itemMortgage2"){
+    //   console.log("this is treu!");
+      // mortStyle.id = "itemMortgage"
+      // mortStyleTab.id = "tabColorSpecial"
+    // }
+
   }
   function removeTermStyle(){
-    // if(mortgageTermEntered === ""){
-    let termStyle = document.getElementById("itemTerm")
-    let termStyleTab = document.getElementById("tabColor")
-    termStyle.removeAttribute("style")
-    termStyleTab.removeAttribute("style")
-    // }
+    let termStyle = document.getElementById("itemTerm2")
+    let termStyleTab = document.getElementById("tabColorAgain")
+    // termStyle.id = "itemTerm"
+    // termStyleTab.id = "tabColor"
   }
   function removeRateStyle(){
-    // if(interestRateEntered === ""){
-    let rateStyle = document.getElementById("itemInterest")
-    let rateStyleTab = document.getElementById("tabColor2")
-    rateStyle.removeAttribute("style")
-    rateStyleTab.removeAttribute("style")
-    // }
+    let rateStyle = document.getElementById("itemInterest2")
+    let rateStyleTab = document.getElementById("tabColor3")
+    // rateStyle.id = "itemInterest"
+    // rateStyleTab.id = "tabColor2"
   }
   console.log(newMortgageAmount)
 
@@ -96,7 +96,7 @@ import "./style.scss"
             value={newMortgageAmount}
             onChange={e => setNewMortgageAmount(e.target.value)}
             id="itemMortgage"
-            onClick={removeAmountStyle}
+            // onClick={removeAmountStyle}
             min="0"
             // onMouseMove={handleMouseOver}
             // onMouseOut={handleMouseLeave}
@@ -117,7 +117,7 @@ import "./style.scss"
             value={mortgageTermEntered}
             onChange={e => setMortgageTermEntered(e.target.value)}
             id="itemTerm"
-            onClick={removeTermStyle}
+            // onClick={removeTermStyle}
             min="1"
             // required
             />
@@ -136,7 +136,7 @@ import "./style.scss"
             value={interestRateEntered}
             onChange={e => setInterestRateEntered(e.target.value)}
             id="itemInterest"
-            onClick={removeRateStyle}
+            // onClick={removeRateStyle}
             min="0"
             // required
             />

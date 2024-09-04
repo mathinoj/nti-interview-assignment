@@ -15,81 +15,33 @@
     // Be sure to nest any custom classes on child elements to avoid conflicts
 }
 
-#itemMortgage2{
-    border: 1px solid red;
-}
-// #itemMortgage2:hover {
-//     border: 1px solid hsl(200, 24%, 40%);
-//     // border-left: 0;
-// }
-#tabColorSpecial2{
-    border: 1px solid red;
-    background-color: red;
-    color: white;
-}
-.form-control:hover + #tabColorSpecial2{
-// #tabColorSpecial2:hover {
+#tabColorSpecial{
+    border-radius: 5px 0px 0px 5px;
     border: 1px solid hsl(200, 24%, 40%);
-    // border-left: 0;
+    background-color: hsl(202, 86%, 94%);
+    // color:hsl(203, 41%, 72%)
 }
 
-
-
-#itemTerm2{
+#itemMortgage2, #itemTerm2, #itemInterest2 {
     border: 1px solid red;
 }
-// #itemTerm2:hover {
-//     border: 1px solid hsl(200, 24%, 40%);
-//     // border-right: 0;
-// }
-#tabColorAgain{
+#tabColorSpecial2, #tabColorAgain, #tabColor3{
     border: 1px solid red;
     background-color: red;
     color: white;
 }
-.form-control:hover + #tabColorAgain {
+#itemMortgage2:hover, #itemTerm2:hover, #itemInterest2:hover {
     border: 1px solid hsl(200, 24%, 40%);
 }
-
-
-#itemInterest2{
-    border: 1px solid red;
-}
-// #itemInterest2:hover{
-//     border: 1px solid hsl(200, 24%, 40%);
-//     // border-right: 0;
-// }
-#tabColor3{
-    border: 1px solid red;
-    background-color: red;
-    color: white;
-}
+.form-control:hover + #tabColorSpecial2,
+.form-control:hover + #tabColorAgain,
 .form-control:hover + #tabColor3 {
     border: 1px solid hsl(200, 24%, 40%);
 }
 
-#itemMortgage2:hover, #itemTerm2:hover, #itemInterest2:hover {
-    border: 1px solid hsl(200, 24%, 40%);
+#itemMortgage2:focus, #itemTerm2:focus, #itemInterest2:focus {
+    border: 1px solid hsl(61, 70%, 52%);
 }
-// #itemInterest:hover {
-//     border: 1px solid hsl(200, 24%, 40%);
-//     border-right: 0;
-// }
-
-// .form-control:hover + #tabColor {
-    // border: 1px solid hsl(200, 24%, 40%);
-    // border-radius: 5px 0px 0px 5px;
-// }
-
-// .form-control:hover + #tabColor2 {
-//     border: 1px solid hsl(200, 24%, 40%);
-// }
-
-// .form-control:hover + #tabColorSpecial {
-//     border: 1px solid hsl(200, 24%, 40%) !important;
-//     border-right: 0 !important;
-// }
-
 .form-control:focus {
     border: 1px solid hsl(61, 70%, 52%);
 }
@@ -104,6 +56,10 @@
 }
 
 .form-control:focus + #tabColor2 {
+    background-color: hsl(61, 70%, 52%);
+    border: 1px solid hsl(61, 70%, 52%);
+}
+.form-control:focus + #tabColor3 {
     background-color: hsl(61, 70%, 52%);
     border: 1px solid hsl(61, 70%, 52%);
 }
@@ -136,9 +92,7 @@ input[type="radio"] {
     cursor: pointer;
   }
 
-#tabColorSpecial{
-    border-radius: 5px 0px 0px 5px;
-}
+
 #tabColorSpecial2{
     border-radius: 5px 0px 0px 5px;
 }

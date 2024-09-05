@@ -7,22 +7,36 @@ import "./style.scss"
     let [interestRateEntered, setInterestRateEntered] = useState([])
 
   //THESE 3 functions remove the red border onClick when inputs are empty
-
+  let mortStyle = document.getElementById("itemMortgage2")
+  // console.log(mortStyle);
   function removeAmountStyle(){
     let mortStyle = document.getElementById("itemMortgage2")
     let mortStyleTab = document.getElementById("tabColorSpecial2")
+    if(mortStyle === "itemMortgage"){
+    mortStyle.id = "itemMortgage"
+    mortStyleTab.id = "tabColorSpecial"
+    }
   }
   function removeTermStyle(){
     let termStyle = document.getElementById("itemTerm2")
     let termStyleTab = document.getElementById("tabColorAgain")
+    if(termStyle === "itemTerm"){
+    termStyle.id = "itemTerm"
+    termStyleTab.id = "tabColor"
+    }
 
   }
   function removeRateStyle(){
     let rateStyle = document.getElementById("itemInterest2")
     let rateStyleTab = document.getElementById("tabColor3")
-
+    if(rateStyle === "itemInterest"){
+    rateStyle.id = "itemInterest"
+    rateStyleTab.id = "tabColor2"
+    }
   }
-  console.log(newMortgageAmount)
+
+
+  // console.log(conditioner);
 
     //Function to clear inputs on click
     function clearInputValues(){
@@ -33,8 +47,12 @@ import "./style.scss"
       removeAmountStyle()
       removeTermStyle()
       removeRateStyle()
-
-
+      function conditioner(){
+        newMortgageAmount !== "";
+        mortgageTermEntered !== "";
+        interestRateEntered !== "";
+      }
+      conditioner()
 
       let getMortgageMsg = document.getElementById("errorMortgage")
       let getTermMsg = document.getElementById("errorTerm")
@@ -71,7 +89,8 @@ import "./style.scss"
     <div id="mortgageApp" className="mortgageApp">
       <div id="titleDiv" className="title mb-2">
         <h1 id="mortgageTitle" className="boldIt mt-2 my-1 py-2">Mortgage Calculator</h1>
-        <button id="reset" className="btn btn-link" type="reset" onClick={() => clearInputValues()}>Clear All</button>
+        <button id="reset" className="btn btn-link" type="reset"
+         onClick={() => clearInputValues()}>Clear All</button>
       </div>
       <div id="mortForm" className="mortgageCalculator">
         <div className="amount p-1 px-0 py-3">

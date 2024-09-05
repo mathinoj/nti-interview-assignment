@@ -13,14 +13,12 @@ const MortgageCalculator = ({ ...props }) => {
 		const data = Object.fromEntries(formData.entries());
 		console.log(data);
 
-		console.log(data.newMortgageAmount)
-
 		let mortgageAmount = parseFloat(data.newMortgageAmount);
 		let mortgageTerm = parseFloat(data.mortgageTermEntered);
 		let interestRate = parseFloat(data.interestRateEntered);
 		let radioButtonChosen = data.type
 
-		//ERROR HANDLING
+		//VALIDATION HANDLING
 		let errorMortgage = document.getElementById("errorMortgage")
 		let errorTerm = document.getElementById("errorTerm")
 		let errorInterest = document.getElementById("errorInterest")
@@ -37,22 +35,22 @@ const MortgageCalculator = ({ ...props }) => {
 
 		if(data.newMortgageAmount === ""){
 			errorMortgage.removeAttribute("hidden")
-			mortBorder.id = "itemMortgage2"
-			tabColorSpecial.id = "tabColorSpecial2"
+			// mortBorder.id = "itemMortgage2"
+			// tabColorSpecial.id = "tabColorSpecial2"
 		}else{
 			errorMortgage.setAttribute("hidden", true)
 		}
 		if(data.mortgageTermEntered === ""){
 			errorTerm.removeAttribute("hidden")
-			termBorder.id = "itemTerm2"
-			tabColor.id = "tabColorAgain"
+			// termBorder.id = "itemTerm2"
+			// tabColor.id = "tabColorAgain"
 		}else{
 			errorTerm.setAttribute("hidden", true)
 		}
 		if(data.interestRateEntered === ""){
 			errorInterest.removeAttribute("hidden")
-			rateBorder.id = "itemInterest2"
-			tabColor2.id = "tabColor3"
+			// rateBorder.id = "itemInterest2"
+			// tabColor2.id = "tabColor3"
 		}else{
 			errorInterest.setAttribute("hidden", true)
 		}
@@ -65,36 +63,6 @@ const MortgageCalculator = ({ ...props }) => {
 
 		//This handles all calculations ONLY if ALL inputs/radios are NOT empty
 		if(radioButtonChosen !== undefined && data.newMortgageAmount !== "" && data.mortgageTermEntered !== "" && data.interestRateEntered !== ""){
-
-		// 	if(mortBorder.id !== "itemMortgage"){
-		// 		console.log("you rite?");
-		// 	}
-		// 	let getNewMortIdInput = document.getElementById("itemMortgage2").id;
-		// 	let getNewTabPound = document.getElementById("tabColorSpecial2").id;
-		// 	if(getNewMortIdInput !== "itemMortgage" && getNewTabPound !== "tabColorSpecial"){
-		// 	let changeMortId = document.getElementById("itemMortgage2")
-		// 	let changePoundId = document.getElementById("tabColorSpecial2")
-		// 	changeMortId.id = "itemMortgage"
-		// 	changePoundId.id = "tabColorSpecial"
-		// 	}
-
-		// 	let getNewTermInput = document.getElementById("itemTerm2").id;
-		// 	let getNewYearsTab = document.getElementById("tabColorAgain").id;
-		// 	if(getNewTermInput !== "itemTerm" && getNewYearsTab !== "tabColor"){
-		// 	let changeTermId = document.getElementById("itemTerm2")
-		// 	let changeYearsTab = document.getElementById("tabColorAgain")
-		// 	changeTermId.id = "itemTerm"
-		// 	changeYearsTab.id = "tabColor"
-		// 	}
-
-		// 	let getNewInterestInput = document.getElementById("itemInterest2").id;
-		// 	let getNewRateTab = document.getElementById("tabColor3").id;
-		// 	if(getNewInterestInput !== "itemInterest" && getNewRateTab !== "tabColor2"){
-		// 	let changeRateId = document.getElementById("itemInterest2")
-		// 	let changeTermId = document.getElementById("tabColor3")
-		// 	changeRateId.id = "itemInterest"
-		// 	changeTermId.id = "tabColor2"
-		// }
 
 			let convertInterestToPercent = interestRate/100;
 			let monthlyRate = convertInterestToPercent/12;
@@ -126,6 +94,40 @@ const MortgageCalculator = ({ ...props }) => {
 			let showResults = document.getElementById('showResults');
 			showResults.removeAttribute("hidden");
 		}
+		// else{
+		// 	let getNewMortIdInput = document.getElementById("itemMortgage2").id;
+		// 	let getNewTabPound = document.getElementById("tabColorSpecial2").id;
+		// 	let getNewTermInput = document.getElementById("itemTerm2").id;
+		// 	let getNewYearsTab = document.getElementById("tabColorAgain").id;
+		// 	let getNewInterestInput = document.getElementById("itemInterest2").id;
+		// 	let getNewRateTab = document.getElementById("tabColor3").id;
+
+		// 	// if(getNewMortIdInput === "itemMortgage2" || getNewTermInput === "itemTerm2" || getNewInterestInput === "itemInterest2"){
+
+		// 		if(getNewMortIdInput !== "itemMortgage" && getNewTabPound !== "tabColorSpecial"){
+		// 	let changeMortId = document.getElementById("itemMortgage2")
+		// 	let changePoundId = document.getElementById("tabColorSpecial2")
+		// 	changeMortId.id = "itemMortgage"
+		// 	changePoundId.id = "tabColorSpecial"
+		// 	}
+
+
+		// 	if(getNewTermInput !== "itemTerm" && getNewYearsTab !== "tabColor"){
+		// 	let changeTermId = document.getElementById("itemTerm2")
+		// 	let changeYearsTab = document.getElementById("tabColorAgain")
+		// 	changeTermId.id = "itemTerm"
+		// 	changeYearsTab.id = "tabColor"
+		// 	}
+
+
+		// 	if(getNewInterestInput !== "itemInterest" && getNewRateTab !== "tabColor2"){
+		// 	let changeRateId = document.getElementById("itemInterest2")
+		// 	let changeTermId = document.getElementById("tabColor3")
+		// 	changeRateId.id = "itemInterest"
+		// 	changeTermId.id = "tabColor2"
+		// // }
+		// 	}
+		// }
 
 
 	};
